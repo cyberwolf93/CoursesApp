@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A1226382983230300BBCF5E /* DownloadDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226372983230300BBCF5E /* DownloadDataContainer.swift */; };
+		8A1226382983230300BBCF5E /* DownloadDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226372983230300BBCF5E /* DownloadDataController.swift */; };
 		8A12263A2983242300BBCF5E /* DownloadItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226392983242300BBCF5E /* DownloadItemModel.swift */; };
+		8A12263C29832EE200BBCF5E /* LessonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12263B29832EE200BBCF5E /* LessonRepository.swift */; };
+		8A12263E2983317800BBCF5E /* DownloadRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12263D2983317800BBCF5E /* DownloadRepository.swift */; };
+		8A1226402983341E00BBCF5E /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12263F2983341E00BBCF5E /* AppDatabase.swift */; };
 		8A91CF3F2983137300682807 /* AppDataBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A91CF362983137300682807 /* AppDataBase.framework */; };
 		8A91CF442983137300682807 /* AppDataBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF432983137300682807 /* AppDataBaseTests.swift */; };
 		8A91CF452983137300682807 /* AppDataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A91CF392983137300682807 /* AppDataBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,8 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A1226372983230300BBCF5E /* DownloadDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataContainer.swift; sourceTree = "<group>"; };
+		8A1226372983230300BBCF5E /* DownloadDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataController.swift; sourceTree = "<group>"; };
 		8A1226392983242300BBCF5E /* DownloadItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadItemModel.swift; sourceTree = "<group>"; };
+		8A12263B29832EE200BBCF5E /* LessonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRepository.swift; sourceTree = "<group>"; };
+		8A12263D2983317800BBCF5E /* DownloadRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadRepository.swift; sourceTree = "<group>"; };
+		8A12263F2983341E00BBCF5E /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		8A91CF362983137300682807 /* AppDataBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppDataBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CF392983137300682807 /* AppDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDataBase.h; sourceTree = "<group>"; };
 		8A91CF3E2983137300682807 /* AppDataBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDataBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +99,9 @@
 				8A91CF7129831A5400682807 /* Controllers */,
 				8A91CF6E2983177100682807 /* Repositories */,
 				8A91CF512983151B00682807 /* Models */,
-				8A91CF392983137300682807 /* AppDataBase.h */,
 				8A91CF6F2983179000682807 /* AppDatabaseManager.swift */,
+				8A12263F2983341E00BBCF5E /* AppDatabase.swift */,
+				8A91CF392983137300682807 /* AppDataBase.h */,
 			);
 			path = AppDataBase;
 			sourceTree = "<group>";
@@ -123,6 +130,8 @@
 		8A91CF6E2983177100682807 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				8A12263B29832EE200BBCF5E /* LessonRepository.swift */,
+				8A12263D2983317800BBCF5E /* DownloadRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -131,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				8A91CF7229831A6400682807 /* LessonDataController.swift */,
-				8A1226372983230300BBCF5E /* DownloadDataContainer.swift */,
+				8A1226372983230300BBCF5E /* DownloadDataController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,12 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A12263C29832EE200BBCF5E /* LessonRepository.swift in Sources */,
 				8A91CF7329831A6400682807 /* LessonDataController.swift in Sources */,
-				8A1226382983230300BBCF5E /* DownloadDataContainer.swift in Sources */,
+				8A1226382983230300BBCF5E /* DownloadDataController.swift in Sources */,
 				8A91CF6D2983170000682807 /* Lesson+CoreDataClass.swift in Sources */,
 				8A91CF6C2983170000682807 /* DownloadItem+CoreDataClass.swift in Sources */,
 				8A12263A2983242300BBCF5E /* DownloadItemModel.swift in Sources */,
+				8A1226402983341E00BBCF5E /* AppDatabase.swift in Sources */,
 				8A91CF7529831BAD00682807 /* LessonModel.swift in Sources */,
+				8A12263E2983317800BBCF5E /* DownloadRepository.swift in Sources */,
 				8A91CF6A2983170000682807 /* DownloadItem+CoreDataProperties.swift in Sources */,
 				8A91CF50298313A100682807 /* AppDataBaseModel.xcdatamodeld in Sources */,
 				8A91CF702983179000682807 /* AppDatabaseManager.swift in Sources */,
