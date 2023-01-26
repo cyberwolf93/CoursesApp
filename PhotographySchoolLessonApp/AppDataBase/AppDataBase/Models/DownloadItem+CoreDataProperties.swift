@@ -17,7 +17,7 @@ extension DownloadItem {
     }
     
     @nonobjc public class func deleteRequestWith(predicate: NSPredicate) -> NSBatchDeleteRequest {
-        var fetchRequest: NSFetchRequest<NSFetchRequestResult> = DownloadItem.fetchRequest()
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = DownloadItem.fetchRequest()
         fetchRequest.predicate = predicate
         return NSBatchDeleteRequest(fetchRequest: fetchRequest)
     }

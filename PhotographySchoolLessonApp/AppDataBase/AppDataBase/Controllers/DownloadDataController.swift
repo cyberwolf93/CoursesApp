@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DownloadDataContainer {
+class DownloadDataController {
     
     let databaseManager: AppDatabaseManager
     
