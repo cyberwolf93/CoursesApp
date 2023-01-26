@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppModels
 
 public class DownloadRepository {
     
@@ -18,7 +19,7 @@ public class DownloadRepository {
     func getAll() -> [DownloadItemModel] {
         var downloadItems = [DownloadItemModel]()
         let downloadItemsDB = controller.getAll()
-        downloadItemsDB.forEach { downloadItems.append(DownloadItemModel.convertFrom(downloadItemDB: $0)) }
+        downloadItemsDB.forEach { downloadItems.append(DownloadItem.convertFrom(downloadItemDB: $0)) }
         return downloadItems
     }
     
@@ -27,13 +28,13 @@ public class DownloadRepository {
             return nil
         }
         
-        return DownloadItemModel.convertFrom(downloadItemDB: downloadItemDB)
+        return DownloadItem.convertFrom(downloadItemDB: downloadItemDB)
     }
     
     func getAllDownloadedItem() -> [DownloadItemModel] {
         var downloadItems = [DownloadItemModel]()
         let downloadItemsDB = controller.getAllDownloadedItem()
-        downloadItemsDB.forEach { downloadItems.append(DownloadItemModel.convertFrom(downloadItemDB: $0)) }
+        downloadItemsDB.forEach { downloadItems.append(DownloadItem.convertFrom(downloadItemDB: $0)) }
         return downloadItems
     }
     

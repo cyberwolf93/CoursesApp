@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppModels
 
 class LessonDataController {
     

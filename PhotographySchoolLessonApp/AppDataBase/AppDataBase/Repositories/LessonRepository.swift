@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppModels
 
 public class LessonRepository {
     
@@ -18,7 +19,7 @@ public class LessonRepository {
     func getAll() -> [LessonModel] {
         var lessons = [LessonModel]()
         let lessonsDB = controller.getAll()
-        lessonsDB.forEach { lessons.append(LessonModel.convertFrom(lessonDB: $0)) }
+        lessonsDB.forEach { lessons.append(Lesson.convertFrom(lessonDB: $0)) }
         return lessons
     }
     
@@ -27,7 +28,7 @@ public class LessonRepository {
             return nil
         }
         
-        return LessonModel.convertFrom(lessonDB: lessonDB)
+        return Lesson.convertFrom(lessonDB: lessonDB)
     }
     
     //MARK: - Add data
