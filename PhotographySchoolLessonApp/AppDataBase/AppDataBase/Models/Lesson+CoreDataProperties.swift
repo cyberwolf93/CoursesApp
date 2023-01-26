@@ -15,6 +15,10 @@ extension Lesson {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Lesson> {
         return NSFetchRequest<Lesson>(entityName: "Lesson")
     }
+    
+    @nonobjc public class func deleteRequest() -> NSBatchDeleteRequest {
+        return NSBatchDeleteRequest(fetchRequest: Self.fetchRequest())
+    }
 
     @NSManaged public var id: Int32
     @NSManaged public var name: String?
