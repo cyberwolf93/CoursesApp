@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */; };
+		8A91CF00298310C600682807 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFF298310C600682807 /* ContentView.swift */; };
+		8A91CF02298310C800682807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A91CF01298310C800682807 /* Assets.xcassets */; };
+		8A91CF14298310C900682807 /* PhotographySchoolLessonAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */; };
+		8A91CF1E298310C900682807 /* PhotographySchoolLessonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */; };
+		8A91CF20298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A91CF10298310C900682807 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A91CEF2298310C600682807 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A91CEF9298310C600682807;
+			remoteInfo = PhotographySchoolLessonApp;
+		};
+		8A91CF1A298310C900682807 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A91CEF2298310C600682807 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A91CEF9298310C600682807;
+			remoteInfo = PhotographySchoolLessonApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A91CEFA298310C600682807 /* PhotographySchoolLessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotographySchoolLessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppApp.swift; sourceTree = "<group>"; };
+		8A91CEFF298310C600682807 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A91CF01298310C800682807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A91CF0F298310C900682807 /* PhotographySchoolLessonAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographySchoolLessonAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppTests.swift; sourceTree = "<group>"; };
+		8A91CF19298310C900682807 /* PhotographySchoolLessonAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographySchoolLessonAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITests.swift; sourceTree = "<group>"; };
+		8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A91CEF7298310C600682807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A91CF0C298310C900682807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A91CF16298310C900682807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A91CEF1298310C600682807 = {
+			isa = PBXGroup;
+			children = (
+				8A91CEFC298310C600682807 /* PhotographySchoolLessonApp */,
+				8A91CF12298310C900682807 /* PhotographySchoolLessonAppTests */,
+				8A91CF1C298310C900682807 /* PhotographySchoolLessonAppUITests */,
+				8A91CEFB298310C600682807 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A91CEFB298310C600682807 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A91CEFA298310C600682807 /* PhotographySchoolLessonApp.app */,
+				8A91CF0F298310C900682807 /* PhotographySchoolLessonAppTests.xctest */,
+				8A91CF19298310C900682807 /* PhotographySchoolLessonAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A91CEFC298310C600682807 /* PhotographySchoolLessonApp */ = {
+			isa = PBXGroup;
+			children = (
+				8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */,
+				8A91CEFF298310C600682807 /* ContentView.swift */,
+				8A91CF01298310C800682807 /* Assets.xcassets */,
+			);
+			path = PhotographySchoolLessonApp;
+			sourceTree = "<group>";
+		};
+		8A91CF12298310C900682807 /* PhotographySchoolLessonAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */,
+			);
+			path = PhotographySchoolLessonAppTests;
+			sourceTree = "<group>";
+		};
+		8A91CF1C298310C900682807 /* PhotographySchoolLessonAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */,
+				8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */,
+			);
+			path = PhotographySchoolLessonAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A91CEF9298310C600682807 /* PhotographySchoolLessonApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A91CF23298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonApp" */;
+			buildPhases = (
+				8A91CEF6298310C600682807 /* Sources */,
+				8A91CEF7298310C600682807 /* Frameworks */,
+				8A91CEF8298310C600682807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotographySchoolLessonApp;
+			productName = PhotographySchoolLessonApp;
+			productReference = 8A91CEFA298310C600682807 /* PhotographySchoolLessonApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A91CF0E298310C900682807 /* PhotographySchoolLessonAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A91CF26298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonAppTests" */;
+			buildPhases = (
+				8A91CF0B298310C900682807 /* Sources */,
+				8A91CF0C298310C900682807 /* Frameworks */,
+				8A91CF0D298310C900682807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A91CF11298310C900682807 /* PBXTargetDependency */,
+			);
+			name = PhotographySchoolLessonAppTests;
+			productName = PhotographySchoolLessonAppTests;
+			productReference = 8A91CF0F298310C900682807 /* PhotographySchoolLessonAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8A91CF18298310C900682807 /* PhotographySchoolLessonAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A91CF29298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonAppUITests" */;
+			buildPhases = (
+				8A91CF15298310C900682807 /* Sources */,
+				8A91CF16298310C900682807 /* Frameworks */,
+				8A91CF17298310C900682807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A91CF1B298310C900682807 /* PBXTargetDependency */,
+			);
+			name = PhotographySchoolLessonAppUITests;
+			productName = PhotographySchoolLessonAppUITests;
+			productReference = 8A91CF19298310C900682807 /* PhotographySchoolLessonAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A91CEF2298310C600682807 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					8A91CEF9298310C600682807 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					8A91CF0E298310C900682807 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 8A91CEF9298310C600682807;
+					};
+					8A91CF18298310C900682807 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 8A91CEF9298310C600682807;
+					};
+				};
+			};
+			buildConfigurationList = 8A91CEF5298310C600682807 /* Build configuration list for PBXProject "PhotographySchoolLessonApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A91CEF1298310C600682807;
+			productRefGroup = 8A91CEFB298310C600682807 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A91CEF9298310C600682807 /* PhotographySchoolLessonApp */,
+				8A91CF0E298310C900682807 /* PhotographySchoolLessonAppTests */,
+				8A91CF18298310C900682807 /* PhotographySchoolLessonAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A91CEF8298310C600682807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A91CF02298310C800682807 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A91CF0D298310C900682807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A91CF17298310C900682807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A91CEF6298310C600682807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A91CF00298310C600682807 /* ContentView.swift in Sources */,
+				8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A91CF0B298310C900682807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A91CF14298310C900682807 /* PhotographySchoolLessonAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A91CF15298310C900682807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A91CF20298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift in Sources */,
+				8A91CF1E298310C900682807 /* PhotographySchoolLessonAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A91CF11298310C900682807 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A91CEF9298310C600682807 /* PhotographySchoolLessonApp */;
+			targetProxy = 8A91CF10298310C900682807 /* PBXContainerItemProxy */;
+		};
+		8A91CF1B298310C900682807 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A91CEF9298310C600682807 /* PhotographySchoolLessonApp */;
+			targetProxy = 8A91CF1A298310C900682807 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8A91CF21298310C900682807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A91CF22298310C900682807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A91CF24298310C900682807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PhotographySchoolLessonApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6TW9S5N48Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amohiy.photographyschoollessonapp.PhotographySchoolLessonApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A91CF25298310C900682807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PhotographySchoolLessonApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6TW9S5N48Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amohiy.photographyschoollessonapp.PhotographySchoolLessonApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A91CF27298310C900682807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6TW9S5N48Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amohiy.photographyschoollessonapp.PhotographySchoolLessonAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotographySchoolLessonApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotographySchoolLessonApp";
+			};
+			name = Debug;
+		};
+		8A91CF28298310C900682807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6TW9S5N48Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amohiy.photographyschoollessonapp.PhotographySchoolLessonAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotographySchoolLessonApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotographySchoolLessonApp";
+			};
+			name = Release;
+		};
+		8A91CF2A298310C900682807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6TW9S5N48Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amohiy.photographyschoollessonapp.PhotographySchoolLessonAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotographySchoolLessonApp;
+			};
+			name = Debug;
+		};
+		8A91CF2B298310C900682807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6TW9S5N48Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amohiy.photographyschoollessonapp.PhotographySchoolLessonAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotographySchoolLessonApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A91CEF5298310C600682807 /* Build configuration list for PBXProject "PhotographySchoolLessonApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A91CF21298310C900682807 /* Debug */,
+				8A91CF22298310C900682807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A91CF23298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A91CF24298310C900682807 /* Debug */,
+				8A91CF25298310C900682807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A91CF26298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A91CF27298310C900682807 /* Debug */,
+				8A91CF28298310C900682807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A91CF29298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A91CF2A298310C900682807 /* Debug */,
+				8A91CF2B298310C900682807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A91CEF2298310C600682807 /* Project object */;
+}
