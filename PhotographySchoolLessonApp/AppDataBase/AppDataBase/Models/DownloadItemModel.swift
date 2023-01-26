@@ -13,3 +13,13 @@ public struct DownloadItemModel {
     let localVideoUrl: String
     let isDownloaded: Bool
 }
+
+//MARK: - Convert from CoreData lessonObject
+extension  DownloadItemModel {
+    static func convertFrom(downloadItemDB: DownloadItem) -> DownloadItemModel {
+        return DownloadItemModel(id: downloadItemDB.id,
+                                 remoteVideoUrl: downloadItemDB.remoteVideoUrl ?? "",
+                                 localVideoUrl: downloadItemDB.localVideoUrl ?? "",
+                                 isDownloaded: downloadItemDB.isDownloaded)
+    }
+}

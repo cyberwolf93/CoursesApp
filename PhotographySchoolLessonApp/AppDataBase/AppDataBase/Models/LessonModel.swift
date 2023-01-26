@@ -14,3 +14,14 @@ public struct LessonModel {
     let thumbnailUrl: String
     let videoUrl: String
 }
+
+//MARK: - Convert from CoreData lessonObject
+extension LessonModel {
+    static func convertFrom(lessonDB: Lesson) -> LessonModel {
+        return LessonModel(id: lessonDB.id,
+                           name: lessonDB.name ?? "",
+                           lessonDescription: lessonDB.lessonDescription ?? "",
+                           thumbnailUrl: lessonDB.thumbnailUrl ?? "",
+                           videoUrl: lessonDB.videoUrl ?? "")
+    }
+}
