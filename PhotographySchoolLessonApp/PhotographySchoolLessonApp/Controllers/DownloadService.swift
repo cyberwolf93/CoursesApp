@@ -80,11 +80,13 @@ extension DownloadService: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         self.delegate?.didFinishDownloadFor(lesson: self.lesson, location: location)
         _ = self.stopDownload()
+        print("DownloadService: lesson complete \(self.lesson?.id) | location: \(location)")
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         
         let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
         self.delegate?.downloadProgressFor(lesson: self.lesson, progress: progress)
+        print("DownloadService: lesson progress id:  \(self.lesson?.id) | progress: \(progress)")
     }
 }
