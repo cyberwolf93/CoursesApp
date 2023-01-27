@@ -20,14 +20,27 @@ struct LessonListView: View {
         NavigationView {
             GeometryReader { geometry in
                 List(viewModel.lessonList, id: \.self) { lesson in
-                    LessonListRow(viewModel: LessonListRowViewModel(lesson: lesson))
-                        .frame(width: geometry.size.width * 0.9,  height: 80)
+                    ZStack { // this zstack to hide chevron icon in navigation link
+                        HStack {
+                            Spacer()
+                            LessonListRow(viewModel: LessonListRowViewModel(lesson: lesson))
+                                .frame(width: geometry.size.width * 0.9,  height: 80)
+                            Spacer()
+                        }
+                        NavigationLink {
+                            ListDetailsRepresentableView(lesson: lesson)
+                                .navigationBarTitleDisplayMode(.inline)
+                        } label: {
+                           EmptyView()
+                        }
+                        .opacity(0)
+                    }
                     .listRowBackground(Color.clear)
                 }
                 .padding(0)
             }
             .navigationBarTitleDisplayMode(.large)
-            .navigationTitle("Lessons")
+            .navigationTitle("screen_title".localized())
             
         }
         .onAppear {
