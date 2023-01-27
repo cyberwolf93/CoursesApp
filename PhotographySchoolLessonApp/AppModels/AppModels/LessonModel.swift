@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LessonModel {
+public struct LessonModel: Hashable {
     public let id: Int32
     public let name: String
     public let lessonDescription: String

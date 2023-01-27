@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DownloadItemModel {
+public struct DownloadItemModel: Hashable {
     public let id: Int32
     public let remoteVideoUrl: String
     public let localVideoUrl: String
