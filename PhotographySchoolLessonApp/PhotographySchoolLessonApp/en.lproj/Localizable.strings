@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  PhotographySchoolLessonApp
+
+  Created by Ahmed Mohiy on 27/01/2023.
+  
+*/
+
+//MARK: - LessonListView
+"screen_title" = "Lessons";
+
+//MARK: - LessonDetails
+"lesso_details_download" = "Download";
+"lesso_details_cancel" = "Cancel";
