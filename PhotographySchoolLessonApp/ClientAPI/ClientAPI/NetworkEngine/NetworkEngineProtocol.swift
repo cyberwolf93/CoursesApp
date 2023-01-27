@@ -6,9 +6,9 @@
 //
 
 import Foundation
-
+import Combine
 
 public protocol NetworkEngineProtocol {
     var urlRequest: URLRequest? {get set}
-    func excute(completion: @escaping (Result<Data, Error>) -> Void)
+    func excute() -> AnyPublisher<Data, Error>
 }
