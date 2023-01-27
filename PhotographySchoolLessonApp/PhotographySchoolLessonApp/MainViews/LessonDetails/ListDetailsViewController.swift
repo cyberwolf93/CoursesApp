@@ -7,6 +7,8 @@
 
 import UIKit
 import SDWebImage
+import AVKit
+import AVFoundation
 
 class ListDetailsViewController: UIViewController {
     
@@ -182,7 +184,13 @@ class ListDetailsViewController: UIViewController {
     
     //MARK: - ACTIONS
     @objc func buttonPlayClicked(gesture: UITapGestureRecognizer) {
-        print("Play")
+        guard let lesson = viewModel?.lesson else {
+            return
+        }
+        let playerViewModel = PlayerViewControllerViewModel(lesson: lesson)
+        let viewController = PlayerViewController()
+        viewController.viewModel  = playerViewModel
+        present(viewController, animated: true)
     }
     
 }
