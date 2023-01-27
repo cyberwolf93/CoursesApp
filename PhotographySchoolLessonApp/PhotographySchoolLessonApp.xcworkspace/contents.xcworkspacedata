@@ -2,9 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AppModels/AppModels.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ClientAPI/ClientAPI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AppDataBase/AppDataBase.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:PhotographySchoolLessonApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

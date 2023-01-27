@@ -3,16 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0CD56246666B2A9438CB9B /* Pods_PhotographySchoolLessonApp_PhotographySchoolLessonAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7E2F3CB581A113949EC95 /* Pods_PhotographySchoolLessonApp_PhotographySchoolLessonAppUITests.framework */; };
+		5AC2593E13EF6DD9E586B96E /* Pods_PhotographySchoolLessonAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8B671AC6549D2C4D5FB94 /* Pods_PhotographySchoolLessonAppTests.framework */; };
+		8A122644298337CE00BBCF5E /* LessonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A122643298337CE00BBCF5E /* LessonListViewModel.swift */; };
+		8A1226642983393900BBCF5E /* AppModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1226632983393900BBCF5E /* AppModels.framework */; };
+		8A1226652983393900BBCF5E /* AppModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1226632983393900BBCF5E /* AppModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A1226C8298376E700BBCF5E /* ClientAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1226C7298376E700BBCF5E /* ClientAPI.framework */; };
+		8A1226C9298376E700BBCF5E /* ClientAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1226C7298376E700BBCF5E /* ClientAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A1226CC2983D2E900BBCF5E /* LessonListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226CB2983D2E900BBCF5E /* LessonListRow.swift */; };
+		8A1226CE2983D31D00BBCF5E /* LessonListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226CD2983D31D00BBCF5E /* LessonListRowViewModel.swift */; };
 		8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */; };
-		8A91CF00298310C600682807 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFF298310C600682807 /* ContentView.swift */; };
+		8A91CF00298310C600682807 /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFF298310C600682807 /* LessonListView.swift */; };
 		8A91CF02298310C800682807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A91CF01298310C800682807 /* Assets.xcassets */; };
 		8A91CF14298310C900682807 /* PhotographySchoolLessonAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */; };
 		8A91CF1E298310C900682807 /* PhotographySchoolLessonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */; };
 		8A91CF20298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */; };
+		E07AC84905F79713C5159C74 /* Pods_PhotographySchoolLessonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,16 +42,47 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8A1226662983393A00BBCF5E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8A1226C9298376E700BBCF5E /* ClientAPI.framework in Embed Frameworks */,
+				8A1226652983393900BBCF5E /* AppModels.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3AA7E2F3CB581A113949EC95 /* Pods_PhotographySchoolLessonApp_PhotographySchoolLessonAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonApp_PhotographySchoolLessonAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA80852C97604FF83FA34E7 /* Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		645B765E3F8384C84F9E92B2 /* Pods-PhotographySchoolLessonAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonAppTests/Pods-PhotographySchoolLessonAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67E0C56CBA0BBDDD20AC4757 /* Pods-PhotographySchoolLessonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonApp/Pods-PhotographySchoolLessonApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8A122643298337CE00BBCF5E /* LessonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListViewModel.swift; sourceTree = "<group>"; };
+		8A1226632983393900BBCF5E /* AppModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A12266729833D8B00BBCF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A1226A92983587D00BBCF5E /* ClientAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClientAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1226C7298376E700BBCF5E /* ClientAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClientAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1226CB2983D2E900BBCF5E /* LessonListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListRow.swift; sourceTree = "<group>"; };
+		8A1226CD2983D31D00BBCF5E /* LessonListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListRowViewModel.swift; sourceTree = "<group>"; };
 		8A91CEFA298310C600682807 /* PhotographySchoolLessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotographySchoolLessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppApp.swift; sourceTree = "<group>"; };
-		8A91CEFF298310C600682807 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A91CEFF298310C600682807 /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
 		8A91CF01298310C800682807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A91CF0F298310C900682807 /* PhotographySchoolLessonAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographySchoolLessonAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppTests.swift; sourceTree = "<group>"; };
 		8A91CF19298310C900682807 /* PhotographySchoolLessonAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographySchoolLessonAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITests.swift; sourceTree = "<group>"; };
 		8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8FA59FB3FA179AC3EB634F08 /* Pods-PhotographySchoolLessonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonAppTests/Pods-PhotographySchoolLessonAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC8B671AC6549D2C4D5FB94 /* Pods_PhotographySchoolLessonAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25433D518BDF5696F709AF9 /* Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB865593953CD18100CCB283 /* Pods-PhotographySchoolLessonApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonApp.release.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonApp/Pods-PhotographySchoolLessonApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1226C8298376E700BBCF5E /* ClientAPI.framework in Frameworks */,
+				8A1226642983393900BBCF5E /* AppModels.framework in Frameworks */,
+				E07AC84905F79713C5159C74 /* Pods_PhotographySchoolLessonApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC2593E13EF6DD9E586B96E /* Pods_PhotographySchoolLessonAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +108,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0CD56246666B2A9438CB9B /* Pods_PhotographySchoolLessonApp_PhotographySchoolLessonAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A122641298337A400BBCF5E /* LessonListView */ = {
+			isa = PBXGroup;
+			children = (
+				8A91CEFF298310C600682807 /* LessonListView.swift */,
+				8A122643298337CE00BBCF5E /* LessonListViewModel.swift */,
+			);
+			path = LessonListView;
+			sourceTree = "<group>";
+		};
+		8A122642298337B300BBCF5E /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A122641298337A400BBCF5E /* LessonListView */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		8A1226622983393900BBCF5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A1226C7298376E700BBCF5E /* ClientAPI.framework */,
+				8A1226A92983587D00BBCF5E /* ClientAPI.framework */,
+				8A1226632983393900BBCF5E /* AppModels.framework */,
+				971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */,
+				3AA7E2F3CB581A113949EC95 /* Pods_PhotographySchoolLessonApp_PhotographySchoolLessonAppUITests.framework */,
+				9AC8B671AC6549D2C4D5FB94 /* Pods_PhotographySchoolLessonAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A1226CA2983D06A00BBCF5E /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A1226CB2983D2E900BBCF5E /* LessonListRow.swift */,
+				8A1226CD2983D31D00BBCF5E /* LessonListRowViewModel.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		8A91CEF1298310C600682807 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +161,8 @@
 				8A91CF12298310C900682807 /* PhotographySchoolLessonAppTests */,
 				8A91CF1C298310C900682807 /* PhotographySchoolLessonAppUITests */,
 				8A91CEFB298310C600682807 /* Products */,
+				8A1226622983393900BBCF5E /* Frameworks */,
+				EA7AA6E6B076D25712471E6B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,8 +179,10 @@
 		8A91CEFC298310C600682807 /* PhotographySchoolLessonApp */ = {
 			isa = PBXGroup;
 			children = (
+				8A12266729833D8B00BBCF5E /* Info.plist */,
+				8A1226CA2983D06A00BBCF5E /* ReusableViews */,
+				8A122642298337B300BBCF5E /* MainViews */,
 				8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */,
-				8A91CEFF298310C600682807 /* ContentView.swift */,
 				8A91CF01298310C800682807 /* Assets.xcassets */,
 			);
 			path = PhotographySchoolLessonApp;
@@ -116,6 +205,19 @@
 			path = PhotographySchoolLessonAppUITests;
 			sourceTree = "<group>";
 		};
+		EA7AA6E6B076D25712471E6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67E0C56CBA0BBDDD20AC4757 /* Pods-PhotographySchoolLessonApp.debug.xcconfig */,
+				FB865593953CD18100CCB283 /* Pods-PhotographySchoolLessonApp.release.xcconfig */,
+				C25433D518BDF5696F709AF9 /* Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.debug.xcconfig */,
+				3DA80852C97604FF83FA34E7 /* Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.release.xcconfig */,
+				645B765E3F8384C84F9E92B2 /* Pods-PhotographySchoolLessonAppTests.debug.xcconfig */,
+				8FA59FB3FA179AC3EB634F08 /* Pods-PhotographySchoolLessonAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A91CF23298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonApp" */;
 			buildPhases = (
+				FE28BD460D3CAFDAA3CCC053 /* [CP] Check Pods Manifest.lock */,
 				8A91CEF6298310C600682807 /* Sources */,
 				8A91CEF7298310C600682807 /* Frameworks */,
 				8A91CEF8298310C600682807 /* Resources */,
+				8A1226662983393A00BBCF5E /* Embed Frameworks */,
+				50DA8A7C7F8EAA98396F3DFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A91CF26298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonAppTests" */;
 			buildPhases = (
+				FED0DE5A1EDE0EB52FE5E342 /* [CP] Check Pods Manifest.lock */,
 				8A91CF0B298310C900682807 /* Sources */,
 				8A91CF0C298310C900682807 /* Frameworks */,
 				8A91CF0D298310C900682807 /* Resources */,
@@ -158,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A91CF29298310C900682807 /* Build configuration list for PBXNativeTarget "PhotographySchoolLessonAppUITests" */;
 			buildPhases = (
+				18D385335772F1C1ADEFD7B7 /* [CP] Check Pods Manifest.lock */,
 				8A91CF15298310C900682807 /* Sources */,
 				8A91CF16298310C900682807 /* Frameworks */,
 				8A91CF17298310C900682807 /* Resources */,
+				D487C0D69E131CD95F333593 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +304,7 @@
 				};
 			};
 			buildConfigurationList = 8A91CEF5298310C600682807 /* Build configuration list for PBXProject "PhotographySchoolLessonApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -240,12 +348,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18D385335772F1C1ADEFD7B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50DA8A7C7F8EAA98396F3DFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotographySchoolLessonApp/Pods-PhotographySchoolLessonApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotographySchoolLessonApp/Pods-PhotographySchoolLessonApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotographySchoolLessonApp/Pods-PhotographySchoolLessonApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D487C0D69E131CD95F333593 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests/Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE28BD460D3CAFDAA3CCC053 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotographySchoolLessonApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FED0DE5A1EDE0EB52FE5E342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotographySchoolLessonAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A91CEF6298310C600682807 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A91CF00298310C600682807 /* ContentView.swift in Sources */,
+				8A91CF00298310C600682807 /* LessonListView.swift in Sources */,
+				8A1226CE2983D31D00BBCF5E /* LessonListRowViewModel.swift in Sources */,
+				8A122644298337CE00BBCF5E /* LessonListViewModel.swift in Sources */,
+				8A1226CC2983D2E900BBCF5E /* LessonListRow.swift in Sources */,
 				8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,19 +613,22 @@
 		};
 		8A91CF24298310C900682807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E0C56CBA0BBDDD20AC4757 /* Pods-PhotographySchoolLessonApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhotographySchoolLessonApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6TW9S5N48Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotographySchoolLessonApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,19 +645,22 @@
 		};
 		8A91CF25298310C900682807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB865593953CD18100CCB283 /* Pods-PhotographySchoolLessonApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhotographySchoolLessonApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6TW9S5N48Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotographySchoolLessonApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +677,7 @@
 		};
 		8A91CF27298310C900682807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 645B765E3F8384C84F9E92B2 /* Pods-PhotographySchoolLessonAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +698,7 @@
 		};
 		8A91CF28298310C900682807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FA59FB3FA179AC3EB634F08 /* Pods-PhotographySchoolLessonAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +719,7 @@
 		};
 		8A91CF2A298310C900682807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25433D518BDF5696F709AF9 /* Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -515,6 +738,7 @@
 		};
 		8A91CF2B298310C900682807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA80852C97604FF83FA34E7 /* Pods-PhotographySchoolLessonApp-PhotographySchoolLessonAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
