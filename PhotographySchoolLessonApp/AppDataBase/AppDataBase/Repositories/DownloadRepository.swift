@@ -16,14 +16,14 @@ public class DownloadRepository {
     }
     
     //MARK: - Fetching data
-    func getAll() -> [DownloadItemModel] {
+    public func getAll() -> [DownloadItemModel] {
         var downloadItems = [DownloadItemModel]()
         let downloadItemsDB = controller.getAll()
         downloadItemsDB.forEach { downloadItems.append(DownloadItem.convertFrom(downloadItemDB: $0)) }
         return downloadItems
     }
     
-    func get(with id: Int32) -> DownloadItemModel? {
+    public func get(with id: Int32) -> DownloadItemModel? {
         guard let downloadItemDB = controller.get(with: id) else {
             return nil
         }
@@ -31,7 +31,7 @@ public class DownloadRepository {
         return DownloadItem.convertFrom(downloadItemDB: downloadItemDB)
     }
     
-    func getAllDownloadedItem() -> [DownloadItemModel] {
+    public func getAllDownloadedItem() -> [DownloadItemModel] {
         var downloadItems = [DownloadItemModel]()
         let downloadItemsDB = controller.getAllDownloadedItem()
         downloadItemsDB.forEach { downloadItems.append(DownloadItem.convertFrom(downloadItemDB: $0)) }
@@ -39,19 +39,19 @@ public class DownloadRepository {
     }
     
     //MARK: - Add data
-    func add(downloadItem: DownloadItemModel) {
+    public func add(downloadItem: DownloadItemModel) {
         guard controller.get(with: downloadItem.id) == nil else {
             return
         }
         controller.add(downloadItem: downloadItem)
     }
     
-    func add(downloadItems: [DownloadItemModel]) {
+    public func add(downloadItems: [DownloadItemModel]) {
         downloadItems.forEach{self.add(downloadItem: $0)}
     }
     
     //MARK: - Update data
-    func Update(item: DownloadItemModel, localUrl: String, isDownloaded: Bool) {
+    public func Update(item: DownloadItemModel, localUrl: String, isDownloaded: Bool) {
         guard let itemDB = controller.get(with: item.id) else {
             return
         }
@@ -60,7 +60,7 @@ public class DownloadRepository {
     
     
     //MARK: - Delete Data
-    func deleteItem(with id: Int32) {
+    public func deleteItem(with id: Int32) {
         controller.deleteItem(with: id)
     }
 }

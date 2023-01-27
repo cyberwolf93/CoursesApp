@@ -9,7 +9,7 @@ import Foundation
 
 public class AppDatabase {
     
-    static let `default`: AppDatabase = AppDatabase()
+    public static let `default`: AppDatabase = AppDatabase()
     
     public var lessonRepository: LessonRepository {
         let lessonController = LessonDataController(databaseManager: AppDatabaseManager.default)
