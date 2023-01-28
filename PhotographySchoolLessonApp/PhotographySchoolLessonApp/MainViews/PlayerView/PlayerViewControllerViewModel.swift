@@ -14,7 +14,7 @@ class PlayerViewControllerViewModel {
     let lesson: LessonModel
     let downloadManager: DownloadManager
     
-    init(lesson: LessonModel, downloadManager: DownloadManager = DownloadManager()) {
+    init(lesson: LessonModel, downloadManager: DownloadManager = DownloadManager.default) {
         self.lesson = lesson
         self.downloadManager = downloadManager
     }
