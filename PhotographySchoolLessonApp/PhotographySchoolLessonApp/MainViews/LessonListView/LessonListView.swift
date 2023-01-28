@@ -28,7 +28,7 @@ struct LessonListView: View {
                             Spacer()
                         }
                         NavigationLink {
-                            ListDetailsRepresentableView(lesson: lesson)
+                            ListDetailsRepresentableView(lesson: lesson, nextLessons: viewModel.getNextLessonsAfter(lesson: lesson))
                                 .navigationBarTitleDisplayMode(.inline)
                         } label: {
                            EmptyView()

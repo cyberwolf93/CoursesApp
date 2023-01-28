@@ -24,6 +24,7 @@ class ListDetailsViewController: UIViewController {
     var viewSeperator: UIView?
     var labelDownloading: UILabel?
     var progressView: UIProgressView?
+    var nextLessonButton: UIButton?
     
     //MARK: - Variables
     var viewModel: ListDetailsViewModel?
@@ -46,6 +47,7 @@ class ListDetailsViewController: UIViewController {
         createTitle()
         createDescription()
         createDownloadProgressView()
+        createNextLessonButton()
     }
     
     //MARK: - View Creation
@@ -209,7 +211,6 @@ class ListDetailsViewController: UIViewController {
             labelDescription!.leftAnchor.constraint(equalTo: parenView.leftAnchor, constant: contentPadding),
             labelDescription!.topAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: contentPadding),
             labelDescription!.rightAnchor.constraint(equalTo: parenView.rightAnchor, constant: -contentPadding),
-            labelDescription!.bottomAnchor.constraint(equalTo: parenView.bottomAnchor, constant: -lastViewBotomPadding)
         ])
     }
     
@@ -263,6 +264,33 @@ class ListDetailsViewController: UIViewController {
         handelDownloadingViewResponsiveness()
     }
     
+    func createNextLessonButton() {
+        guard let parenView else {return}
+        guard let progressView else {return}
+        
+        nextLessonButton = UIButton()
+        nextLessonButton?.tintColor = .systemBlue
+        nextLessonButton?.setTitle("lesson_details_next_lesson".localized(), for: .normal)
+        nextLessonButton?.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        var configuration = UIButton.Configuration.plain()
+        configuration.imagePadding = 5
+        configuration.imagePlacement = .trailing
+        nextLessonButton?.configuration = configuration
+        parenView.addSubview(nextLessonButton!)
+        nextLessonButton?.addTarget(self, action: #selector(buttonNextLessonClicked), for: .touchUpInside)
+        nextLessonButton?.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            nextLessonButton!.rightAnchor.constraint(equalTo: parenView.rightAnchor),
+            nextLessonButton!.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 50),
+            nextLessonButton!.bottomAnchor.constraint(equalTo: parenView.bottomAnchor, constant: -lastViewBotomPadding)
+        ])
+        
+        // Hide next button if there is no next lesson
+        nextLessonButton?.isHidden = (viewModel?.nextLessons.count ?? 0) == 0
+    }
+    
+    //MARK: - Helping methods for download view
+    
     func shouldHideDownloadView(hide: Bool) {
         viewSeperator?.isHidden = hide
         labelDownloading?.isHidden = hide
@@ -304,6 +332,18 @@ class ListDetailsViewController: UIViewController {
         let viewController = PlayerViewController()
         viewController.viewModel  = playerViewModel
         present(viewController, animated: true)
+    }
+    
+    @objc func buttonNextLessonClicked() {
+        guard let nextLesson = viewModel?.getNextLesson(),
+              let nextLessonList = viewModel?.prepareNextLessonList() else {
+            return
+        }
+        
+        let viewController = UIHostingController(rootView:
+                                                ListDetailsRepresentableView(lesson: nextLesson, nextLessons:nextLessonList)
+                                                        .navigationBarTitleDisplayMode(.inline))
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc func startDownloadButtonClicked() {

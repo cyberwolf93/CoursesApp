@@ -19,6 +19,7 @@ class LessonListViewModel: ObservableObject {
     private var cancellable: [AnyCancellable] = []
     var appDatabase: AppDatabase = AppDatabase.default
     
+    // MARK: - Handling data
     func isInternetConnectionExist() -> Bool {
         guard let reachability = try? Reachability() else {return false}
         switch (reachability.connection) {
@@ -38,6 +39,29 @@ class LessonListViewModel: ObservableObject {
         self.getLessonsLocal() 
     }
     
+    //MARK: - View helper methods
+    func getNextLessonsAfter(lesson: LessonModel) -> [LessonModel] {
+        var lessonIndex = -1
+        var nextLessonsList = [LessonModel]()
+        // Get the lessons index
+        for (i,lessonFromList) in  lessonList.enumerated() {
+            if lesson.id == lessonFromList.id {
+                lessonIndex = i
+                break
+            }
+        }
+        
+        var lastIndex = lessonList.count - 1
+        // return next lessons list as a stack so the next lesson will be on the top of the stack
+        // and the last lesson will be at the bottom of the stack
+        while(lessonIndex >= 0 && lastIndex > lessonIndex) {
+            nextLessonsList.append(lessonList[lastIndex])
+            lastIndex -= 1
+        }
+        return nextLessonsList
+    }
+    
+    // MARK: - Internal methods
     private func getLessonsLocal() {
         lessonList = self.appDatabase.lessonRepository.getAll()
     }

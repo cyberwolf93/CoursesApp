@@ -11,10 +11,11 @@ import AppModels
 struct ListDetailsRepresentableView: UIViewControllerRepresentable {
     
     var lesson: LessonModel
+    var nextLessons: [LessonModel]
     
     func makeUIViewController(context: Context) -> ListDetailsViewController {
         let viewController = ListDetailsViewController()
-        viewController.viewModel = ListDetailsViewModel(lesson: lesson)
+        viewController.viewModel = ListDetailsViewModel(lesson: lesson, nextLessons: nextLessons)
         
         context.coordinator.parentObserver = viewController.observe(\.parent, changeHandler: { vc, _ in
             vc.parent?.navigationItem.rightBarButtonItems = vc.navigationItem.rightBarButtonItems

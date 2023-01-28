@@ -22,6 +22,17 @@
 		8A91CF14298310C900682807 /* PhotographySchoolLessonAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */; };
 		8A91CF1E298310C900682807 /* PhotographySchoolLessonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */; };
 		8A91CF20298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */; };
+		8AFA460C2983EB61002AB181 /* ListDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA460B2983EB61002AB181 /* ListDetailsViewController.swift */; };
+		8AFA460E2983EBAD002AB181 /* ListDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA460D2983EBAD002AB181 /* ListDetailsViewModel.swift */; };
+		8AFA46102983EC3D002AB181 /* ListDetailsRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA460F2983EC3D002AB181 /* ListDetailsRepresentableView.swift */; };
+		8AFA46132983FA86002AB181 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46122983FA86002AB181 /* StringExtension.swift */; };
+		8AFA46172983FB1C002AB181 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AFA46192983FB1C002AB181 /* Localizable.strings */; };
+		8AFA463C29842D30002AB181 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA463B29842D30002AB181 /* PlayerViewController.swift */; };
+		8AFA463E29844734002AB181 /* PlayerViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA463D29844734002AB181 /* PlayerViewControllerViewModel.swift */; };
+		8AFA46412984492B002AB181 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46402984492B002AB181 /* DownloadManager.swift */; };
+		8AFA464329845DF2002AB181 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA464229845DF2002AB181 /* DownloadService.swift */; };
+		8AFA464529846729002AB181 /* AppDataBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA464429846729002AB181 /* AppDataBase.framework */; };
+		8AFA464629846729002AB181 /* AppDataBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA464429846729002AB181 /* AppDataBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E07AC84905F79713C5159C74 /* Pods_PhotographySchoolLessonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +62,7 @@
 			files = (
 				8A1226C9298376E700BBCF5E /* ClientAPI.framework in Embed Frameworks */,
 				8A1226652983393900BBCF5E /* AppModels.framework in Embed Frameworks */,
+				8AFA464629846729002AB181 /* AppDataBase.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +90,16 @@
 		8A91CF19298310C900682807 /* PhotographySchoolLessonAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographySchoolLessonAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITests.swift; sourceTree = "<group>"; };
 		8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AFA460B2983EB61002AB181 /* ListDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsViewController.swift; sourceTree = "<group>"; };
+		8AFA460D2983EBAD002AB181 /* ListDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsViewModel.swift; sourceTree = "<group>"; };
+		8AFA460F2983EC3D002AB181 /* ListDetailsRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsRepresentableView.swift; sourceTree = "<group>"; };
+		8AFA46122983FA86002AB181 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		8AFA46182983FB1C002AB181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8AFA463B29842D30002AB181 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		8AFA463D29844734002AB181 /* PlayerViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerViewModel.swift; sourceTree = "<group>"; };
+		8AFA46402984492B002AB181 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		8AFA464229845DF2002AB181 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		8AFA464429846729002AB181 /* AppDataBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppDataBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA59FB3FA179AC3EB634F08 /* Pods-PhotographySchoolLessonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonAppTests/Pods-PhotographySchoolLessonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC8B671AC6549D2C4D5FB94 /* Pods_PhotographySchoolLessonAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +115,7 @@
 				8A1226C8298376E700BBCF5E /* ClientAPI.framework in Frameworks */,
 				8A1226642983393900BBCF5E /* AppModels.framework in Frameworks */,
 				E07AC84905F79713C5159C74 /* Pods_PhotographySchoolLessonApp.framework in Frameworks */,
+				8AFA464529846729002AB181 /* AppDataBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +150,8 @@
 		8A122642298337B300BBCF5E /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				8AFA463A29842D1A002AB181 /* PlayerView */,
+				8AFA460A2983EB41002AB181 /* LessonDetails */,
 				8A122641298337A400BBCF5E /* LessonListView */,
 			);
 			path = MainViews;
@@ -135,6 +160,7 @@
 		8A1226622983393900BBCF5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AFA464429846729002AB181 /* AppDataBase.framework */,
 				8A1226C7298376E700BBCF5E /* ClientAPI.framework */,
 				8A1226A92983587D00BBCF5E /* ClientAPI.framework */,
 				8A1226632983393900BBCF5E /* AppModels.framework */,
@@ -179,11 +205,11 @@
 		8A91CEFC298310C600682807 /* PhotographySchoolLessonApp */ = {
 			isa = PBXGroup;
 			children = (
-				8A12266729833D8B00BBCF5E /* Info.plist */,
+				8AFA463F29844919002AB181 /* Controllers */,
+				8AFA46112983FA6D002AB181 /* Extensions */,
 				8A1226CA2983D06A00BBCF5E /* ReusableViews */,
 				8A122642298337B300BBCF5E /* MainViews */,
-				8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */,
-				8A91CF01298310C800682807 /* Assets.xcassets */,
+				8AFA46142983FAF3002AB181 /* Resources */,
 			);
 			path = PhotographySchoolLessonApp;
 			sourceTree = "<group>";
@@ -203,6 +229,53 @@
 				8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */,
 			);
 			path = PhotographySchoolLessonAppUITests;
+			sourceTree = "<group>";
+		};
+		8AFA460A2983EB41002AB181 /* LessonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA460B2983EB61002AB181 /* ListDetailsViewController.swift */,
+				8AFA460D2983EBAD002AB181 /* ListDetailsViewModel.swift */,
+				8AFA460F2983EC3D002AB181 /* ListDetailsRepresentableView.swift */,
+			);
+			path = LessonDetails;
+			sourceTree = "<group>";
+		};
+		8AFA46112983FA6D002AB181 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA46122983FA86002AB181 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8AFA46142983FAF3002AB181 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A12266729833D8B00BBCF5E /* Info.plist */,
+				8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */,
+				8A91CF01298310C800682807 /* Assets.xcassets */,
+				8AFA46192983FB1C002AB181 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8AFA463A29842D1A002AB181 /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA463B29842D30002AB181 /* PlayerViewController.swift */,
+				8AFA463D29844734002AB181 /* PlayerViewControllerViewModel.swift */,
+			);
+			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		8AFA463F29844919002AB181 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA46402984492B002AB181 /* DownloadManager.swift */,
+				8AFA464229845DF2002AB181 /* DownloadService.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EA7AA6E6B076D25712471E6B /* Pods */ = {
@@ -329,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A91CF02298310C800682807 /* Assets.xcassets in Resources */,
+				8AFA46172983FB1C002AB181 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,8 +533,16 @@
 				8A91CF00298310C600682807 /* LessonListView.swift in Sources */,
 				8A1226CE2983D31D00BBCF5E /* LessonListRowViewModel.swift in Sources */,
 				8A122644298337CE00BBCF5E /* LessonListViewModel.swift in Sources */,
+				8AFA460C2983EB61002AB181 /* ListDetailsViewController.swift in Sources */,
 				8A1226CC2983D2E900BBCF5E /* LessonListRow.swift in Sources */,
+				8AFA46132983FA86002AB181 /* StringExtension.swift in Sources */,
+				8AFA460E2983EBAD002AB181 /* ListDetailsViewModel.swift in Sources */,
+				8AFA46412984492B002AB181 /* DownloadManager.swift in Sources */,
+				8AFA46102983EC3D002AB181 /* ListDetailsRepresentableView.swift in Sources */,
+				8AFA464329845DF2002AB181 /* DownloadService.swift in Sources */,
 				8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */,
+				8AFA463C29842D30002AB181 /* PlayerViewController.swift in Sources */,
+				8AFA463E29844734002AB181 /* PlayerViewControllerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +577,17 @@
 			targetProxy = 8A91CF1A298310C900682807 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AFA46192983FB1C002AB181 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AFA46182983FB1C002AB181 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8A91CF21298310C900682807 /* Debug */ = {

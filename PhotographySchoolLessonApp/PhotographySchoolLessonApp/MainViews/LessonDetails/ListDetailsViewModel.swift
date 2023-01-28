@@ -12,6 +12,7 @@ import Combine
 class ListDetailsViewModel {
     
     let lesson: LessonModel
+    let nextLessons: [LessonModel]
     let downloadManager: DownloadManager
     private var cancelable = Set<AnyCancellable>()
     
@@ -19,13 +20,26 @@ class ListDetailsViewModel {
     let downloadProgressSubject = PassthroughSubject<Float, Never>()
     
     
-    init(lesson: LessonModel, downloadManager: DownloadManager = DownloadManager.default) {
+    init(lesson: LessonModel,nextLessons: [LessonModel], downloadManager: DownloadManager = DownloadManager.default) {
         self.lesson = lesson
+        self.nextLessons = nextLessons
         self.downloadManager = downloadManager
         self.listenForDownloadComplete()
         self.listenForDownloadProgress()
     }
     
+    //MARK: - Next lesson helper methods
+    func getNextLesson() -> LessonModel? {
+        return nextLessons.last
+    }
+    
+    func prepareNextLessonList() -> [LessonModel] {
+        var nextLessonList = nextLessons
+        nextLessonList.removeLast()
+        return nextLessonList
+    }
+    
+    // MARK: - Download Helper methods
     func checkLessonInDownloadQueue() -> Bool {
         return self.downloadManager.isLessonInDonwloadQueue(id: lesson.id)
     }
