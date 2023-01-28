@@ -6,31 +6,173 @@
 //
 
 import XCTest
+import AppModels
+import Combine
 @testable import ClientAPI
 
 final class ClientAPITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var cancelable =  Set<AnyCancellable>()
+  
+    func testFetchLessonsSuccess() {
+        let networkEngine = NetworkEngineMockSuccess()
+        let controller = ClientApiControllerMock(engine: networkEngine)
+        
+        var lessons: [LessonModel] = []
+        
+        let expectation = XCTestExpectation(description: "testFetchLessonsSuccess")
+        controller.lessonNetworkManager.fetchLessons()
+            .sink { _ in
+                
+            } receiveValue: { lessonsList in
+                lessons = lessonsList
+                expectation.fulfill()
+            }.store(in: &cancelable)
+        
+        networkEngine.publisher.send(networkEngine.getData())
+        wait(for: [expectation], timeout: 1)
+        
+        XCTAssertEqual(lessons.count, 1)
+        let mockLesson = networkEngine.getFirstLesson()
+        XCTAssertEqual(lessons.first!.id, mockLesson.id)
+        XCTAssertEqual(lessons.first!.name, mockLesson.name)
+        XCTAssertEqual(lessons.first!.lessonDescription, mockLesson.lessonDescription)
+        XCTAssertEqual(lessons.first!.thumbnailUrl, mockLesson.thumbnailUrl)
+        XCTAssertEqual(lessons.first!.videoUrl, mockLesson.videoUrl)
+        
+    }
+    
+    func testFetchLessonsBadReuest() {
+        let networkEngine = NetworkEngineMockBadRequest()
+        let controller = ClientApiControllerMock(engine: networkEngine)
+        
+        var err: NetworkEngineError = .notFound
+        let expectation = XCTestExpectation(description: "testFetchLessonsBadReuest")
+        controller.lessonNetworkManager.fetchLessons()
+            .sink { completion in
+                if case let .failure(error) = completion,
+                   let error = error as? NetworkEngineError {
+                    err = error
+                }
+                
+                expectation.fulfill()
+            } receiveValue: { _ in}.store(in: &cancelable)
+        
+        wait(for: [expectation], timeout: 1)
+        
+        XCTAssertEqual(err, NetworkEngineError.badRequest)
+        
+    }
+    
+    func testFetchLessonsNotFound() {
+        let networkEngine = NetworkEngineMockNotFound()
+        let controller = ClientApiControllerMock(engine: networkEngine)
+        
+        var err: NetworkEngineError = .badRequest
+        let expectation = XCTestExpectation(description: "testFetchLessonsNotFound")
+        controller.lessonNetworkManager.fetchLessons()
+            .sink { completion in
+                if case let .failure(error) = completion,
+                   let error = error as? NetworkEngineError {
+                    err = error
+                }
+                
+                expectation.fulfill()
+            } receiveValue: { _ in}.store(in: &cancelable)
+        
+        wait(for: [expectation], timeout: 1)
+        
+        XCTAssertEqual(err, NetworkEngineError.notFound)
+        
+    }
+    
+    func testFetchLessonsServerError() {
+        let networkEngine = NetworkEngineMockServerError()
+        let controller = ClientApiControllerMock(engine: networkEngine)
+        
+        var err: NetworkEngineError = .badRequest
+        let expectation = XCTestExpectation(description: "testFetchLessonsServerError")
+        controller.lessonNetworkManager.fetchLessons()
+            .sink { completion in
+                if case let .failure(error) = completion,
+                   let error = error as? NetworkEngineError {
+                    err = error
+                }
+                
+                expectation.fulfill()
+            } receiveValue: { _ in}.store(in: &cancelable)
+        
+        wait(for: [expectation], timeout: 1)
+        
+        XCTAssertEqual(err, NetworkEngineError.serverError)
+        
+    }
+    
+    func testFetchLessonsUnAuthorized() {
+        let networkEngine = NetworkEngineMockUnAuthorized()
+        let controller = ClientApiControllerMock(engine: networkEngine)
+        
+        var err: NetworkEngineError = .badRequest
+        let expectation = XCTestExpectation(description: "testFetchLessonsUnAuthorized")
+        controller.lessonNetworkManager.fetchLessons()
+            .sink { completion in
+                if case let .failure(error) = completion,
+                   let error = error as? NetworkEngineError {
+                    err = error
+                }
+                
+                expectation.fulfill()
+            } receiveValue: { _ in}.store(in: &cancelable)
+        
+        wait(for: [expectation], timeout: 1)
+        
+        XCTAssertEqual(err, NetworkEngineError.unAuthorized)
+        
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testFetchLessonsInvalidUrl() {
+        let networkEngine = NetworkEngineMockInvalidUrl()
+        let controller = ClientApiControllerMock(engine: networkEngine)
+        
+        var err: NetworkEngineError = .badRequest
+        let expectation = XCTestExpectation(description: "testFetchLessonsInvalidUrl")
+        controller.lessonNetworkManager.fetchLessons()
+            .sink { completion in
+                if case let .failure(error) = completion,
+                   let error = error as? NetworkEngineError {
+                    err = error
+                }
+                
+                expectation.fulfill()
+            } receiveValue: { _ in}.store(in: &cancelable)
+        
+        wait(for: [expectation], timeout: 1)
+        
+        XCTAssertEqual(err, NetworkEngineError.invalidUrl)
+        
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testFetchLessonsInvalidData() {
+        let networkEngine = NetworkEngineMockInvalidData()
+        let controller = ClientApiControllerMock(engine: networkEngine)
+        
+        var err: NetworkEngineError = .badRequest
+        let expectation = XCTestExpectation(description: "testFetchLessonsInvalidData")
+        controller.lessonNetworkManager.fetchLessons()
+            .sink { completion in
+                if case let .failure(error) = completion,
+                   let error = error as? NetworkEngineError {
+                    err = error
+                }
+                
+                expectation.fulfill()
+            } receiveValue: { _ in}.store(in: &cancelable)
+        
+        wait(for: [expectation], timeout: 1)
+        
+        XCTAssertEqual(err, NetworkEngineError.invalidData)
+        
     }
 
 }
