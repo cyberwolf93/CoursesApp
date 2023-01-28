@@ -19,9 +19,9 @@ class DownloadService: NSObject {
     var lesson: DownloadItemModel?
     var isDownlaoding: Bool = false
     var downloadTask: URLSessionDownloadTask?
+    var serialQueue = DispatchQueue(label: "DownloadServiceQueue", qos: .userInitiated)
     lazy var downloadSession: URLSession = {
-        let configuration = URLSessionConfiguration.background(withIdentifier: "com.amohiy.photographyschoollessonapp.PhotographySchoolLessonApp")
-        
+        let configuration = URLSessionConfiguration.default
         return URLSession(configuration: configuration,
                           delegate: self,
                           delegateQueue: nil)
@@ -30,48 +30,63 @@ class DownloadService: NSObject {
     
     //MARK: - Methods
     func setupDownloadingSession(lesson: DownloadItemModel) {
-        // Cancel if any task is running
-        downloadTask?.cancel()
-        downloadTask = nil
-        
-        //set the new lesson to be downloaded
-        self.lesson = lesson
-        
-        // get the url or reset if url not valid
-        guard let url = URL(string: lesson.remoteVideoUrl) else {
-            self.lesson = nil
-            return
+        serialQueue.async {[weak self] in
+            // Cancel if any task is running
+            self?.downloadTask?.cancel()
+            self?.downloadTask = nil
+            
+            //set the new lesson to be downloaded
+            self?.lesson = lesson
+            
+            // get the url or reset if url not valid
+            guard let url = URL(string: lesson.remoteVideoUrl) else {
+                self?.lesson = nil
+                return
+            }
+            // create new downlaod task
+            self?.downloadTask = self?.downloadSession.downloadTask(with: url)
+            self?.startDownload()
         }
-        // create new downlaod task
-        downloadTask = downloadSession.downloadTask(with: url)
-        self.startDownload()
     }
     
     func isDownloadInProgress() -> Bool {
-        return isDownlaoding
+        var downlaoding = false
+        let group = DispatchGroup()
+        group.enter()
+        serialQueue.async {[weak self] in
+            downlaoding = self?.isDownlaoding ?? true
+            group.leave()
+        }
+        _ = group.wait(wallTimeout: .now() + 5)
+        return downlaoding
     }
     
     func cancelDownloadFor(lesson: DownloadItemModel) {
         guard let currentLesson = self.lesson , currentLesson.id == lesson.id else {return}
-        _ = self.stopDownload()
+        self.stopDownload()
     }
     
     // MARK: - Internal methods
-    private func stopDownload() -> DownloadItemModel? {
-        defer {
-            self.lesson = nil
+    private func stopDownload() {
+        serialQueue.async {[weak self] in
+            defer {
+                self?.lesson = nil
+            }
+            self?.downloadTask?.cancel()
+            self?.downloadTask = nil
+            self?.isDownlaoding = false
         }
-        downloadTask?.cancel()
-        downloadTask = nil
-        isDownlaoding = false
-        return self.lesson
+        
     }
     
     
     //MARK: private methods
     private func startDownload() {
-        downloadTask?.resume()
-        isDownlaoding = true
+        serialQueue.async {[weak self] in
+            self?.downloadTask?.resume()
+            self?.isDownlaoding = true
+        }
+        
     }
     
     
@@ -81,7 +96,7 @@ extension DownloadService: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         self.delegate?.didFinishDownloadFor(lesson: self.lesson, location: location)
         print("DownloadService: lesson complete \(self.lesson?.id) | location: \(location)")
-        _ = self.stopDownload()
+        self.stopDownload()
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
@@ -91,17 +106,4 @@ extension DownloadService: URLSessionDownloadDelegate {
         print("DownloadService: lesson progress id:  \(self.lesson?.id) | progress: \(progress)")
     }
     
-}
-
-//MARK: This delegate to download lessons while the app in the background
-extension DownloadService: URLSessionDelegate {
-    func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
-        DispatchQueue.main.async {
-            if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-               let completionHandler = appDelegate.backgroundSessionCompletionHandler {
-                appDelegate.backgroundSessionCompletionHandler = nil
-                completionHandler()
-            }
-        }
-    }
 }

@@ -20,8 +20,7 @@ struct PhotographySchoolLessonAppApp: App {
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    
-    var backgroundSessionCompletionHandler: (() -> Void)?
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -37,9 +36,5 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ = DownloadManager.default
         
         return true
-    }
-    
-    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
-        backgroundSessionCompletionHandler = completionHandler
     }
 }

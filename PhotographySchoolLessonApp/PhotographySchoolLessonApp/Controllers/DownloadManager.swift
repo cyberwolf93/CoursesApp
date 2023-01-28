@@ -79,6 +79,9 @@ class DownloadManager: NSObject {
             // fetch last database lessons
             self.fetchDownloadLessonQueue()
             
+            // Start the next video to be downloaded
+            self.startDownloadRequest()
+            
         }
     }
     
@@ -266,7 +269,7 @@ extension DownloadManager: DownloadServiceDelegate {
                 // update sendout lesseon downloa completed
                 self.downloadCompleteSubject.send(lesson.id)
                 
-                // Start the next video to pe downloaded
+                // Start the next video to be downloaded
                 self.startDownloadRequest()
             }
         } catch {
