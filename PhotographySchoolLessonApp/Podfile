@@ -6,6 +6,7 @@ target 'PhotographySchoolLessonApp' do
   use_frameworks!
 
   pod 'SDWebImageSwiftUI'
+  pod 'ReachabilitySwift'
 
   target 'PhotographySchoolLessonAppTests' do
     inherit! :search_paths
