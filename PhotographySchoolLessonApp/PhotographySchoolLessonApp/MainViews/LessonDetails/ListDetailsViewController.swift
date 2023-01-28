@@ -9,6 +9,8 @@ import UIKit
 import SDWebImage
 import AVKit
 import AVFoundation
+import Combine
+import SwiftUI
 
 class ListDetailsViewController: UIViewController {
     
@@ -19,12 +21,16 @@ class ListDetailsViewController: UIViewController {
     var labelTitle: UILabel?
     var labelDescription: UILabel?
     var playImageView: UIImageView?
+    var viewSeperator: UIView?
+    var labelDownloading: UILabel?
+    var progressView: UIProgressView?
     
     //MARK: - Variables
     var viewModel: ListDetailsViewModel?
     var contentPadding: CGFloat = 10.0
     var labelDescriptionPadding: CGFloat = 5.0
     var lastViewBotomPadding: CGFloat = 50
+    private var cancelable = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +45,42 @@ class ListDetailsViewController: UIViewController {
         createThumbnailView()
         createTitle()
         createDescription()
+        createDownloadProgressView()
     }
     
     //MARK: - View Creation
     func createDownloadBarButton() {
+        guard let viewModel else {return}
+        if viewModel.checkLessonInDownloadQueue() {
+            createRemoveDownloanBarButton()
+        } else {
+            createStartDownloanBarButton()
+        }
+    }
+    
+    func createStartDownloanBarButton() {
         let button = UIButton()
         var confguration = UIButton.Configuration.plain()
         confguration.imagePadding = 5
         confguration.contentInsets = .zero
         button.setImage(UIImage(systemName: "icloud.and.arrow.down"), for: .normal)
-        button.setTitle("lesso_details_download".localized(), for: .normal)
+        button.setTitle("lesson_details_download".localized(), for: .normal)
         button.configuration = confguration
+        button.addTarget(self, action: #selector(startDownloadButtonClicked), for: .touchUpInside)
+        let downloadButton = UIBarButtonItem(customView: button)
+        downloadButton.customView?.isUserInteractionEnabled = true
+        self.navigationItem.rightBarButtonItems = [downloadButton]
+    }
+    
+    func createRemoveDownloanBarButton() {
+        let button = UIButton()
+        var confguration = UIButton.Configuration.plain()
+        confguration.imagePadding = 5
+        confguration.contentInsets = .zero
+        button.setImage(UIImage(systemName: "trash.slash"), for: .normal)
+        button.setTitle("lesson_details_remove".localized(), for: .normal)
+        button.configuration = confguration
+        button.addTarget(self, action: #selector(removeDownloadButtonClicked), for: .touchUpInside)
         let downloadButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItems = [downloadButton]
     }
@@ -166,7 +197,7 @@ class ListDetailsViewController: UIViewController {
         
         // title label
         labelDescription = UILabel()
-        labelDescription!.text = (viewModel?.lesson.lessonDescription ?? "") + (viewModel?.lesson.lessonDescription ?? "")
+        labelDescription!.text = viewModel?.lesson.lessonDescription
         labelDescription!.font = UIFont.preferredFont(forTextStyle: .caption1)
         labelDescription!.adjustsFontForContentSizeCategory = true
         labelDescription!.textColor = .label
@@ -182,6 +213,88 @@ class ListDetailsViewController: UIViewController {
         ])
     }
     
+    // create download progress view
+    func createDownloadProgressView() {
+        guard let labelDescription else {return}
+        guard let parenView else {return}
+        
+        // Seperator view
+        viewSeperator = UIView()
+        viewSeperator!.backgroundColor = .gray.withAlphaComponent(0.4)
+        parenView.addSubview(viewSeperator!)
+        viewSeperator!.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            viewSeperator!.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: contentPadding),
+            viewSeperator!.leftAnchor.constraint(equalTo: parenView.leftAnchor, constant: contentPadding),
+            viewSeperator!.rightAnchor.constraint(equalTo: parenView.rightAnchor, constant: -contentPadding),
+            viewSeperator!.heightAnchor.constraint(equalToConstant: 1)
+        ])
+        
+        // Label Downloading
+        labelDownloading = UILabel()
+        labelDownloading?.text = "lesson_details_downloading".localized()
+        labelDownloading?.font = UIFont.preferredFont(forTextStyle: .title2)
+        labelDownloading?.adjustsFontForContentSizeCategory = true
+        labelDownloading?.textColor = .systemBlue
+        labelDownloading?.numberOfLines = 1
+        parenView.addSubview(labelDownloading!)
+        labelDownloading?.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            labelDownloading!.topAnchor.constraint(equalTo: viewSeperator!.bottomAnchor, constant: contentPadding),
+            labelDownloading!.leftAnchor.constraint(equalTo: parenView.leftAnchor, constant: contentPadding),
+        ])
+        
+        // download progress bar
+        progressView = UIProgressView()
+        progressView?.trackTintColor = .darkGray
+        progressView?.progressTintColor = .systemBlue
+        progressView?.progressViewStyle = .bar
+        progressView?.progress = 0.01
+        progressView?.isUserInteractionEnabled = false
+        progressView?.translatesAutoresizingMaskIntoConstraints = false
+        parenView.addSubview(progressView!)
+        NSLayoutConstraint.activate([
+            progressView!.topAnchor.constraint(equalTo: labelDownloading!.bottomAnchor, constant: 2),
+            progressView!.leftAnchor.constraint(equalTo: parenView.leftAnchor, constant: contentPadding),
+            progressView!.rightAnchor.constraint(equalTo: parenView.rightAnchor, constant: -contentPadding),
+            progressView!.heightAnchor.constraint(equalToConstant: 2)
+        ])
+        
+        handelDownloadingViewResponsiveness()
+    }
+    
+    func shouldHideDownloadView(hide: Bool) {
+        viewSeperator?.isHidden = hide
+        labelDownloading?.isHidden = hide
+        progressView?.isHidden = hide
+    }
+    
+    func handelDownloadingViewResponsiveness() {
+        var shouldHideView = true
+        if let viewModel, viewModel.checkLessonInDownloadQueue(), !viewModel.checkLessonDownloadComplete() {
+            shouldHideView = false
+        }
+        shouldHideDownloadView(hide: shouldHideView)
+        
+        // listen on download complete
+        viewModel?.downloadCompleteSubject
+            .sink(receiveValue: { [weak self]_ in
+                self?.shouldHideDownloadView(hide: true)
+            }).store(in: &cancelable)
+        
+        // listen on download progress
+        viewModel?.downloadProgressSubject
+            .sink(receiveValue: { [weak self] progress in
+                if self?.progressView?.isHidden ?? false {
+                    self?.shouldHideDownloadView(hide: false)
+                }
+                UIView.animate(withDuration: 0.4, delay: 0) {
+                    self?.progressView?.progress = progress
+                }
+                
+            }).store(in: &cancelable)
+    }
+    
     //MARK: - ACTIONS
     @objc func buttonPlayClicked(gesture: UITapGestureRecognizer) {
         guard let lesson = viewModel?.lesson else {
@@ -191,6 +304,18 @@ class ListDetailsViewController: UIViewController {
         let viewController = PlayerViewController()
         viewController.viewModel  = playerViewModel
         present(viewController, animated: true)
+    }
+    
+    @objc func startDownloadButtonClicked() {
+        self.viewModel?.startDownload()
+        self.createRemoveDownloanBarButton()
+        self.shouldHideDownloadView(hide: false)
+    }
+    
+    @objc func removeDownloadButtonClicked() {
+        self.viewModel?.removeDownload()
+        self.createStartDownloanBarButton()
+        self.shouldHideDownloadView(hide: true)
     }
     
 }
