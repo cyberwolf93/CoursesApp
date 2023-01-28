@@ -12,8 +12,10 @@ class AppDatabaseManager {
 
     //MARK: - Variables
     static let `default`: AppDatabaseManager = AppDatabaseManager()
-    lazy var persistentContainer: NSPersistentContainer = {
-        let modelURL = Bundle(for: type(of: self)).url(forResource: "AppDataBaseModel", withExtension: "momd")!
+    var persistentContainer: NSPersistentContainer!
+    
+    init() {
+        let modelURL = Bundle(identifier: "com.amohiy.photographyschoollessonapp.database.AppDataBase")!.url(forResource: "AppDataBaseModel", withExtension: "momd")!
         let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)!
         let container = NSPersistentContainer(name: "AppDataBaseModel", managedObjectModel: managedObjectModel)
         container.loadPersistentStores { storeDescription, error in
@@ -22,8 +24,8 @@ class AppDatabaseManager {
             }
         }
         
-        return container
-    }()
+        persistentContainer = container
+    }
     
     //MARK: Save to data base
     func saveContext() {

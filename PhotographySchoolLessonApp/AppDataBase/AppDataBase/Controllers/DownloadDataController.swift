@@ -40,7 +40,7 @@ class DownloadDataController {
     func getAllDownloadedItem() -> [DownloadItem] {
         do {
             let fetchRequest = DownloadItem.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "isDownloaded == %@", true)
+            fetchRequest.predicate = NSPredicate(format: "isDownloaded == %@", NSNumber(value: true))
             return try databaseManager.persistentContainer.viewContext.fetch(fetchRequest)
         } catch {
             print("Failed to fetch downloaded items error: \(error)")
