@@ -10,5 +10,6 @@
 "screen_title" = "Lessons";
 
 //MARK: - LessonDetails
-"lesso_details_download" = "Download";
-"lesso_details_cancel" = "Cancel";
+"lesson_details_download" = "Download";
+"lesson_details_remove" = "Remove";
+"lesson_details_downloading" = "Downloading...";
