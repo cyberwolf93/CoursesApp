@@ -13,7 +13,9 @@ class AppDatabaseManager {
     //MARK: - Variables
     static let `default`: AppDatabaseManager = AppDatabaseManager()
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "AppDataBaseModel")
+        let modelURL = Bundle(for: type(of: self)).url(forResource: "AppDataBaseModel", withExtension: "momd")!
+        let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)!
+        let container = NSPersistentContainer(name: "AppDataBaseModel", managedObjectModel: managedObjectModel)
         container.loadPersistentStores { storeDescription, error in
             if let error = error as? NSError {
                 fatalError("load database err: \(error), userInfo: \(error.userInfo)")

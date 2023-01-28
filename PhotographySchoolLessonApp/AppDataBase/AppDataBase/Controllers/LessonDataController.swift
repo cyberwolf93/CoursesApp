@@ -29,7 +29,7 @@ class LessonDataController {
     func get(with id: Int32) -> Lesson? {
         do {
             let fetchRequest = Lesson.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+            fetchRequest.predicate = NSPredicate(format: "id == %d", id)
             return try databaseManager.persistentContainer.viewContext.fetch(fetchRequest).first
         } catch {
             print("Failed to fetch lesson: \(id) error: \(error)")

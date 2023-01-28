@@ -16,14 +16,14 @@ public class LessonRepository {
     }
     
     //MARK: - Fetching data
-    func getAll() -> [LessonModel] {
+    public func getAll() -> [LessonModel] {
         var lessons = [LessonModel]()
         let lessonsDB = controller.getAll()
         lessonsDB.forEach { lessons.append(Lesson.convertFrom(lessonDB: $0)) }
         return lessons
     }
     
-    func get(with id: Int32) -> LessonModel? {
+    public func get(with id: Int32) -> LessonModel? {
         guard let lessonDB = controller.get(with: id) else {
             return nil
         }
@@ -32,19 +32,19 @@ public class LessonRepository {
     }
     
     //MARK: - Add data
-    func add(lesson: LessonModel) {
+    public func add(lesson: LessonModel) {
         guard controller.get(with: lesson.id) == nil else {
             return
         }
         controller.add(lesson: lesson)
     }
     
-    func add(lessons: [LessonModel]) {
+    public func add(lessons: [LessonModel]) {
         lessons.forEach{ self.add(lesson: $0) }
     }
     
     //MARK: - Delete Data
-    func deleteAll() {
+    public func deleteAll() {
         controller.deleteAll()
     }
     

@@ -29,7 +29,7 @@ class DownloadDataController {
     func get(with id: Int32) -> DownloadItem? {
         do {
             let fetchRequest = DownloadItem.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+            fetchRequest.predicate = NSPredicate(format: "id == %d", id)
             return try databaseManager.persistentContainer.viewContext.fetch(fetchRequest).first
         } catch {
             print("Failed to fetch downloaded item: \(id) error: \(error)")
@@ -40,7 +40,7 @@ class DownloadDataController {
     func getAllDownloadedItem() -> [DownloadItem] {
         do {
             let fetchRequest = DownloadItem.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "isDownloaded = %@", true)
+            fetchRequest.predicate = NSPredicate(format: "isDownloaded == %@", true)
             return try databaseManager.persistentContainer.viewContext.fetch(fetchRequest)
         } catch {
             print("Failed to fetch downloaded items error: \(error)")
@@ -78,7 +78,7 @@ class DownloadDataController {
     
     //MARK: - Delete Data
     func deleteItem(with id: Int32) {
-        let predicate = NSPredicate(format: "id = %@", id)
+        let predicate = NSPredicate(format: "id == %d", id)
         let deleteRequest = DownloadItem.deleteRequestWith(predicate: predicate)
         do {
             try databaseManager.persistentContainer.viewContext.execute(deleteRequest)
