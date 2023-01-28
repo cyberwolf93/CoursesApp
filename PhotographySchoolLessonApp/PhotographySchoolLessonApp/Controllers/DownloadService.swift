@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import AppModels
 
 protocol DownloadServiceDelegate: NSObjectProtocol {
@@ -19,7 +20,7 @@ class DownloadService: NSObject {
     var isDownlaoding: Bool = false
     var downloadTask: URLSessionDownloadTask?
     lazy var downloadSession: URLSession = {
-        let configuration = URLSessionConfiguration.default
+        let configuration = URLSessionConfiguration.background(withIdentifier: "com.amohiy.photographyschoollessonapp.PhotographySchoolLessonApp")
         
         return URLSession(configuration: configuration,
                           delegate: self,
@@ -51,7 +52,7 @@ class DownloadService: NSObject {
     }
     
     func cancelDownloadFor(lesson: DownloadItemModel) {
-        guard let currentLesson = self.lesson ,  currentLesson.id != lesson.id else {return}
+        guard let currentLesson = self.lesson , currentLesson.id == lesson.id else {return}
         _ = self.stopDownload()
     }
     
@@ -79,8 +80,8 @@ class DownloadService: NSObject {
 extension DownloadService: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         self.delegate?.didFinishDownloadFor(lesson: self.lesson, location: location)
-        _ = self.stopDownload()
         print("DownloadService: lesson complete \(self.lesson?.id) | location: \(location)")
+        _ = self.stopDownload()
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
@@ -88,5 +89,19 @@ extension DownloadService: URLSessionDownloadDelegate {
         let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
         self.delegate?.downloadProgressFor(lesson: self.lesson, progress: progress)
         print("DownloadService: lesson progress id:  \(self.lesson?.id) | progress: \(progress)")
+    }
+    
+}
+
+//MARK: This delegate to download lessons while the app in the background
+extension DownloadService: URLSessionDelegate {
+    func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+        DispatchQueue.main.async {
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+               let completionHandler = appDelegate.backgroundSessionCompletionHandler {
+                appDelegate.backgroundSessionCompletionHandler = nil
+                completionHandler()
+            }
+        }
     }
 }
