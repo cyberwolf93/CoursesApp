@@ -87,15 +87,15 @@ make sure to choose a developer team then run it on a real device with and iOS v
 
 ## Tech stack
 
-     [XCode](https://developer.apple.com/documentation/xcode)
-     [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
-     [SwiftUI](https://developer.apple.com/documentation/swiftui/)
-     [UIKit](https://developer.apple.com/documentation/uikit)
-     [Combine](https://developer.apple.com/documentation/combine)
-     [CocoaPods](https://cocoapods.org/)
-     [CoreData](https://developer.apple.com/documentation/coredata)
-     [XCTest](https://developer.apple.com/documentation/xctest)
-    
+[XCode](https://developer.apple.com/documentation/xcode)
+[Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+[SwiftUI](https://developer.apple.com/documentation/swiftui/)
+[UIKit](https://developer.apple.com/documentation/uikit)
+[Combine](https://developer.apple.com/documentation/combine)
+[CocoaPods](https://cocoapods.org/)
+[CoreData](https://developer.apple.com/documentation/coredata)
+[XCTest](https://developer.apple.com/documentation/xctest)
+
 
 ## Future Plans
 
