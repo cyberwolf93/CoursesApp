@@ -11,4 +11,6 @@ import AppModels
 
 class LessonRepositoryMock: LessonRepository {
     
+    var dataStore: DataStoreLesson = DataStoreLessonThreeItems()
+    
 }

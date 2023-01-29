@@ -15,7 +15,7 @@ protocol DataStoreDownload {
 class DataStoreDownloadOneItemDownloaded: DataStoreDownload {
      var downloaditems: [DownloadItemModel] = [DownloadItemModel(id: 950,
                                                                     remoteVideoUrl: "https://embed-ssl.wistia.com/deliveries/cc8402e8c16cc8f36d3f63bd29eb82f99f4b5f88/accudvh5jy.mp4",
-                                                                    localVideoUrl: "https://embed-ssl.wistia.com/deliveries/cc8402e8c16cc8f36d3f63bd29eb82f99f4b5f88/accudvh5jy.mp4",
+                                                                    localVideoUrl: "https://embed-ssl.wistia.com/deliveries/cc8402e8c16cc8f36d3f63bd29eb82f99f4b5f88/bjx305gqt5.mp4",
                                                                     isDownloaded: true)]
 }
 

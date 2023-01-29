@@ -16,6 +16,7 @@
 		8A1226C9298376E700BBCF5E /* ClientAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1226C7298376E700BBCF5E /* ClientAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A1226CC2983D2E900BBCF5E /* LessonListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226CB2983D2E900BBCF5E /* LessonListRow.swift */; };
 		8A1226CE2983D31D00BBCF5E /* LessonListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226CD2983D31D00BBCF5E /* LessonListRowViewModel.swift */; };
+		8A2B78C72986FD12009C8F89 /* DownloadManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B78C62986FD12009C8F89 /* DownloadManagerMock.swift */; };
 		8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */; };
 		8A91CF00298310C600682807 /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFF298310C600682807 /* LessonListView.swift */; };
 		8A91CF02298310C800682807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A91CF01298310C800682807 /* Assets.xcassets */; };
@@ -39,6 +40,9 @@
 		8AFA46AD2985E3A1002AB181 /* LessonRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46AC2985E3A1002AB181 /* LessonRepositoryMock.swift */; };
 		8AFA46AF2985E41E002AB181 /* DataStoreDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46AE2985E41E002AB181 /* DataStoreDownload.swift */; };
 		8AFA46B12985E72D002AB181 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46B02985E72D002AB181 /* FileManagerMock.swift */; };
+		8AFA46B32986E419002AB181 /* PlayerViewViewModelTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46B22986E419002AB181 /* PlayerViewViewModelTestCases.swift */; };
+		8AFA46B52986E9BC002AB181 /* DataStoreLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46B42986E9BC002AB181 /* DataStoreLesson.swift */; };
+		8AFA46B72986EAB6002AB181 /* ListDetailsViewModelTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46B62986EAB6002AB181 /* ListDetailsViewModelTestCases.swift */; };
 		E07AC84905F79713C5159C74 /* Pods_PhotographySchoolLessonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +91,7 @@
 		8A1226C7298376E700BBCF5E /* ClientAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClientAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1226CB2983D2E900BBCF5E /* LessonListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListRow.swift; sourceTree = "<group>"; };
 		8A1226CD2983D31D00BBCF5E /* LessonListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListRowViewModel.swift; sourceTree = "<group>"; };
+		8A2B78C62986FD12009C8F89 /* DownloadManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerMock.swift; sourceTree = "<group>"; };
 		8A91CEFA298310C600682807 /* PhotographySchoolLessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotographySchoolLessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppApp.swift; sourceTree = "<group>"; };
 		8A91CEFF298310C600682807 /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
@@ -112,6 +117,9 @@
 		8AFA46AC2985E3A1002AB181 /* LessonRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRepositoryMock.swift; sourceTree = "<group>"; };
 		8AFA46AE2985E41E002AB181 /* DataStoreDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreDownload.swift; sourceTree = "<group>"; };
 		8AFA46B02985E72D002AB181 /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		8AFA46B22986E419002AB181 /* PlayerViewViewModelTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewViewModelTestCases.swift; sourceTree = "<group>"; };
+		8AFA46B42986E9BC002AB181 /* DataStoreLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreLesson.swift; sourceTree = "<group>"; };
+		8AFA46B62986EAB6002AB181 /* ListDetailsViewModelTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsViewModelTestCases.swift; sourceTree = "<group>"; };
 		8FA59FB3FA179AC3EB634F08 /* Pods-PhotographySchoolLessonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonAppTests/Pods-PhotographySchoolLessonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC8B671AC6549D2C4D5FB94 /* Pods_PhotographySchoolLessonAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +200,14 @@
 			path = ReusableViews;
 			sourceTree = "<group>";
 		};
+		8A2B78C52986FCB0009C8F89 /* ListDetailsMocks */ = {
+			isa = PBXGroup;
+			children = (
+				8A2B78C62986FD12009C8F89 /* DownloadManagerMock.swift */,
+			);
+			path = ListDetailsMocks;
+			sourceTree = "<group>";
+		};
 		8A91CEF1298310C600682807 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				8A91CF13298310C900682807 /* DownloadManagerTestCases.swift */,
+				8AFA46B22986E419002AB181 /* PlayerViewViewModelTestCases.swift */,
+				8AFA46B62986EAB6002AB181 /* ListDetailsViewModelTestCases.swift */,
 				8AFA46A12985DF80002AB181 /* Mocks */,
 			);
 			path = PhotographySchoolLessonAppTests;
@@ -296,6 +314,7 @@
 			children = (
 				8AFA46A72985E29A002AB181 /* DatabaseMock */,
 				8AFA46A22985DF88002AB181 /* DownloadManagerMocks */,
+				8A2B78C52986FCB0009C8F89 /* ListDetailsMocks */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -316,6 +335,7 @@
 				8AFA46AA2985E35A002AB181 /* DownloadRepositoryMock.swift */,
 				8AFA46AC2985E3A1002AB181 /* LessonRepositoryMock.swift */,
 				8AFA46AE2985E41E002AB181 /* DataStoreDownload.swift */,
+				8AFA46B42986E9BC002AB181 /* DataStoreLesson.swift */,
 			);
 			path = DatabaseMock;
 			sourceTree = "<group>";
@@ -592,12 +612,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFA46B32986E419002AB181 /* PlayerViewViewModelTestCases.swift in Sources */,
+				8AFA46B52986E9BC002AB181 /* DataStoreLesson.swift in Sources */,
 				8A91CF14298310C900682807 /* DownloadManagerTestCases.swift in Sources */,
 				8AFA46AB2985E35A002AB181 /* DownloadRepositoryMock.swift in Sources */,
 				8AFA46A92985E2EF002AB181 /* AppDatabaseMock.swift in Sources */,
+				8AFA46B72986EAB6002AB181 /* ListDetailsViewModelTestCases.swift in Sources */,
 				8AFA46B12985E72D002AB181 /* FileManagerMock.swift in Sources */,
 				8AFA46AF2985E41E002AB181 /* DataStoreDownload.swift in Sources */,
 				8AFA46AD2985E3A1002AB181 /* LessonRepositoryMock.swift in Sources */,
+				8A2B78C72986FD12009C8F89 /* DownloadManagerMock.swift in Sources */,
 				8AFA46A42985DFA1002AB181 /* DownloadServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
