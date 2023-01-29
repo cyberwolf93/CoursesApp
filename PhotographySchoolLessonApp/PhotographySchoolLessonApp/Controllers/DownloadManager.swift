@@ -19,12 +19,14 @@ class DownloadManager: NSObject {
     let downloadProgressSubject = PassthroughSubject<(id:Int32,progress: Float), Never>()
     
     // MARK: - Controllers
-    private let databaseControlelr: AppDatabase
+    private let databaseController: AppDatabase
     private let downloadService: DownloadService
+    private let fileManager:FileManager
     
-    init(databaseControlelr: AppDatabase = AppDatabase.default, downloadService: DownloadService = DownloadService()) {
-        self.databaseControlelr = databaseControlelr
+    init(databaseController: AppDatabase = AppDatabase.default, downloadService: DownloadService = DownloadService(), fileManager: FileManager = FileManager.default) {
+        self.databaseController = databaseController
         self.downloadService = downloadService
+        self.fileManager = fileManager
         super.init()
         self.downloadService.delegate = self
         fetchDownloadLessonQueue()
@@ -70,7 +72,7 @@ class DownloadManager: NSObject {
             
             // removed downloaded lesson local file
             if let url = URL(string: lesson.localVideoUrl) {
-                try? FileManager.default.removeItem(at: url)
+                try? self.fileManager.removeItem(at: url)
             }
             
             // remove downlaoded lesson from database
@@ -179,7 +181,7 @@ class DownloadManager: NSObject {
     
     private func getDestinationUrlFor(lesson: DownloadItemModel) -> URL? {
         // get document path
-        guard let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
+        guard let documentPath = self.fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
         guard let url = URL(string: lesson.remoteVideoUrl) else {return nil}
         return documentPath.appendingPathComponent(url.lastPathComponent)
     }
@@ -191,7 +193,7 @@ class DownloadManager: NSObject {
             
             downloadedLessons.forEach({ lesson in
                 if let url = URL(string: lesson.localVideoUrl),
-                   !FileManager.default.fileExists(atPath: url.path) {
+                   !self.fileManager.fileExists(atPath: url.path) {
                     self.removeLessonFromDatabase(with: lesson)
                 }
             })
@@ -205,7 +207,7 @@ extension DownloadManager {
     private func fetchDownloadLessonQueue() {
         taskQueue.async { [weak self] in
             guard let self else {return}
-            self.lessonsInQueue = self.databaseControlelr.downloadRepository.getAll()
+            self.lessonsInQueue = self.databaseController.downloadRepository.getAll()
             print(self.lessonsInQueue.count)
         }
     }
@@ -214,7 +216,7 @@ extension DownloadManager {
     private func updateLessonInDatabase(lesson: DownloadItemModel) {
         taskQueue.async {[weak self] in
             guard let self else {return}
-            self.databaseControlelr.downloadRepository.Update(item: lesson,
+            self.databaseController.downloadRepository.Update(item: lesson,
                                                               localUrl: lesson.localVideoUrl,
                                                               isDownloaded: true)
         }
@@ -224,7 +226,7 @@ extension DownloadManager {
     private func removeLessonFromDatabase(with lesson: DownloadItemModel) {
         taskQueue.async {[weak self] in
             guard let self else {return}
-            self.databaseControlelr.downloadRepository.deleteItem(with: lesson.id)
+            self.databaseController.downloadRepository.deleteItem(with: lesson.id)
         }
     }
     
@@ -232,7 +234,7 @@ extension DownloadManager {
     private func addLessonInDatabase(lesson: DownloadItemModel) {
         taskQueue.async {[weak self] in
             guard let self else {return}
-            self.databaseControlelr.downloadRepository.add(downloadItem: lesson)
+            self.databaseController.downloadRepository.add(downloadItem: lesson)
         }
     }
 }
@@ -248,11 +250,11 @@ extension DownloadManager: DownloadServiceDelegate {
         print("destination url for : \(lesson.id)| location: \(destinationUrl)")
         
         // Clean this destination
-        try? FileManager.default.removeItem(at: destinationUrl)
+        try? self.fileManager.removeItem(at: destinationUrl)
         
         do {
             // copy the lesson from the temporary location to permanent location
-            try FileManager.default.copyItem(at: url, to: destinationUrl)
+            try self.fileManager.copyItem(at: url, to: destinationUrl)
             taskQueue.async { [weak self] in
                 guard let self else {return}
                 let newLesson = DownloadItemModel(id: lesson.id,

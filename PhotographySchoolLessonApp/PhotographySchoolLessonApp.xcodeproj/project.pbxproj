@@ -19,7 +19,7 @@
 		8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */; };
 		8A91CF00298310C600682807 /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFF298310C600682807 /* LessonListView.swift */; };
 		8A91CF02298310C800682807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A91CF01298310C800682807 /* Assets.xcassets */; };
-		8A91CF14298310C900682807 /* PhotographySchoolLessonAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */; };
+		8A91CF14298310C900682807 /* DownloadManagerTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF13298310C900682807 /* DownloadManagerTestCases.swift */; };
 		8A91CF1E298310C900682807 /* PhotographySchoolLessonAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */; };
 		8A91CF20298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */; };
 		8AFA460C2983EB61002AB181 /* ListDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA460B2983EB61002AB181 /* ListDetailsViewController.swift */; };
@@ -33,6 +33,12 @@
 		8AFA464329845DF2002AB181 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA464229845DF2002AB181 /* DownloadService.swift */; };
 		8AFA464529846729002AB181 /* AppDataBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA464429846729002AB181 /* AppDataBase.framework */; };
 		8AFA464629846729002AB181 /* AppDataBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA464429846729002AB181 /* AppDataBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8AFA46A42985DFA1002AB181 /* DownloadServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46A32985DFA1002AB181 /* DownloadServiceMock.swift */; };
+		8AFA46A92985E2EF002AB181 /* AppDatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46A82985E2EF002AB181 /* AppDatabaseMock.swift */; };
+		8AFA46AB2985E35A002AB181 /* DownloadRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46AA2985E35A002AB181 /* DownloadRepositoryMock.swift */; };
+		8AFA46AD2985E3A1002AB181 /* LessonRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46AC2985E3A1002AB181 /* LessonRepositoryMock.swift */; };
+		8AFA46AF2985E41E002AB181 /* DataStoreDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46AE2985E41E002AB181 /* DataStoreDownload.swift */; };
+		8AFA46B12985E72D002AB181 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA46B02985E72D002AB181 /* FileManagerMock.swift */; };
 		E07AC84905F79713C5159C74 /* Pods_PhotographySchoolLessonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +92,7 @@
 		8A91CEFF298310C600682807 /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
 		8A91CF01298310C800682807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A91CF0F298310C900682807 /* PhotographySchoolLessonAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographySchoolLessonAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppTests.swift; sourceTree = "<group>"; };
+		8A91CF13298310C900682807 /* DownloadManagerTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerTestCases.swift; sourceTree = "<group>"; };
 		8A91CF19298310C900682807 /* PhotographySchoolLessonAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographySchoolLessonAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CF1D298310C900682807 /* PhotographySchoolLessonAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITests.swift; sourceTree = "<group>"; };
 		8A91CF1F298310C900682807 /* PhotographySchoolLessonAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -100,6 +106,12 @@
 		8AFA46402984492B002AB181 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		8AFA464229845DF2002AB181 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		8AFA464429846729002AB181 /* AppDataBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppDataBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AFA46A32985DFA1002AB181 /* DownloadServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadServiceMock.swift; sourceTree = "<group>"; };
+		8AFA46A82985E2EF002AB181 /* AppDatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabaseMock.swift; sourceTree = "<group>"; };
+		8AFA46AA2985E35A002AB181 /* DownloadRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadRepositoryMock.swift; sourceTree = "<group>"; };
+		8AFA46AC2985E3A1002AB181 /* LessonRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRepositoryMock.swift; sourceTree = "<group>"; };
+		8AFA46AE2985E41E002AB181 /* DataStoreDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreDownload.swift; sourceTree = "<group>"; };
+		8AFA46B02985E72D002AB181 /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
 		8FA59FB3FA179AC3EB634F08 /* Pods-PhotographySchoolLessonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotographySchoolLessonAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotographySchoolLessonAppTests/Pods-PhotographySchoolLessonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		971E25C29F7977EBF23BF287 /* Pods_PhotographySchoolLessonApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC8B671AC6549D2C4D5FB94 /* Pods_PhotographySchoolLessonAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotographySchoolLessonAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +229,8 @@
 		8A91CF12298310C900682807 /* PhotographySchoolLessonAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A91CF13298310C900682807 /* PhotographySchoolLessonAppTests.swift */,
+				8A91CF13298310C900682807 /* DownloadManagerTestCases.swift */,
+				8AFA46A12985DF80002AB181 /* Mocks */,
 			);
 			path = PhotographySchoolLessonAppTests;
 			sourceTree = "<group>";
@@ -276,6 +289,35 @@
 				8AFA464229845DF2002AB181 /* DownloadService.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8AFA46A12985DF80002AB181 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA46A72985E29A002AB181 /* DatabaseMock */,
+				8AFA46A22985DF88002AB181 /* DownloadManagerMocks */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8AFA46A22985DF88002AB181 /* DownloadManagerMocks */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA46A32985DFA1002AB181 /* DownloadServiceMock.swift */,
+				8AFA46B02985E72D002AB181 /* FileManagerMock.swift */,
+			);
+			path = DownloadManagerMocks;
+			sourceTree = "<group>";
+		};
+		8AFA46A72985E29A002AB181 /* DatabaseMock */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA46A82985E2EF002AB181 /* AppDatabaseMock.swift */,
+				8AFA46AA2985E35A002AB181 /* DownloadRepositoryMock.swift */,
+				8AFA46AC2985E3A1002AB181 /* LessonRepositoryMock.swift */,
+				8AFA46AE2985E41E002AB181 /* DataStoreDownload.swift */,
+			);
+			path = DatabaseMock;
 			sourceTree = "<group>";
 		};
 		EA7AA6E6B076D25712471E6B /* Pods */ = {
@@ -550,7 +592,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A91CF14298310C900682807 /* PhotographySchoolLessonAppTests.swift in Sources */,
+				8A91CF14298310C900682807 /* DownloadManagerTestCases.swift in Sources */,
+				8AFA46AB2985E35A002AB181 /* DownloadRepositoryMock.swift in Sources */,
+				8AFA46A92985E2EF002AB181 /* AppDatabaseMock.swift in Sources */,
+				8AFA46B12985E72D002AB181 /* FileManagerMock.swift in Sources */,
+				8AFA46AF2985E41E002AB181 /* DataStoreDownload.swift in Sources */,
+				8AFA46AD2985E3A1002AB181 /* LessonRepositoryMock.swift in Sources */,
+				8AFA46A42985DFA1002AB181 /* DownloadServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
