@@ -5,10 +5,9 @@
 This repository contains an app has some lessons to teach people  photography.
 
 ## Screenshots
-<img src="ReadmeAssets/screenshots/list_screen.PNG" width="200">
-<img src="ReadmeAssets/screenshots/details.PNG" width="200">
-<img src="ReadmeAssets/screenshots/details_download.PNG" width="200">
-<img src="ReadmeAssets/screenshots/player.PNG" width="200">
+<img src="ReadmeAssets/screenshots/list_screen.PNG" width="200"><img src="ReadmeAssets/screenshots/details.PNG" width="200">
+<img src="ReadmeAssets/screenshots/details_download.PNG" width="200"><img src="ReadmeAssets/screenshots/player.PNG" width="200">
+
 
 ## Overview
 
@@ -88,12 +87,19 @@ make sure to choose a developer team then run it on a real device with and iOS v
 ## Tech stack
 
 [XCode](https://developer.apple.com/documentation/xcode)
+
 [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+
 [SwiftUI](https://developer.apple.com/documentation/swiftui/)
+
 [UIKit](https://developer.apple.com/documentation/uikit)
+
 [Combine](https://developer.apple.com/documentation/combine)
+
 [CocoaPods](https://cocoapods.org/)
+
 [CoreData](https://developer.apple.com/documentation/coredata)
+
 [XCTest](https://developer.apple.com/documentation/xctest)
 
 
