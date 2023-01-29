@@ -17,6 +17,10 @@
 		8A1226CC2983D2E900BBCF5E /* LessonListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226CB2983D2E900BBCF5E /* LessonListRow.swift */; };
 		8A1226CE2983D31D00BBCF5E /* LessonListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1226CD2983D31D00BBCF5E /* LessonListRowViewModel.swift */; };
 		8A2B78C72986FD12009C8F89 /* DownloadManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B78C62986FD12009C8F89 /* DownloadManagerMock.swift */; };
+		8A2B78CA298703A8009C8F89 /* ClienApiControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B78C9298703A8009C8F89 /* ClienApiControllerMock.swift */; };
+		8A2B78CC29870474009C8F89 /* LessonNetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B78CB29870474009C8F89 /* LessonNetworkManagerMock.swift */; };
+		8A2B78CE2987053C009C8F89 /* LessonListViewModelTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B78CD2987053C009C8F89 /* LessonListViewModelTestCases.swift */; };
+		8A2B78D029870669009C8F89 /* LessonListViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B78CF29870669009C8F89 /* LessonListViewModelMock.swift */; };
 		8A91CEFE298310C600682807 /* PhotographySchoolLessonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */; };
 		8A91CF00298310C600682807 /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91CEFF298310C600682807 /* LessonListView.swift */; };
 		8A91CF02298310C800682807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A91CF01298310C800682807 /* Assets.xcassets */; };
@@ -92,6 +96,10 @@
 		8A1226CB2983D2E900BBCF5E /* LessonListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListRow.swift; sourceTree = "<group>"; };
 		8A1226CD2983D31D00BBCF5E /* LessonListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListRowViewModel.swift; sourceTree = "<group>"; };
 		8A2B78C62986FD12009C8F89 /* DownloadManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerMock.swift; sourceTree = "<group>"; };
+		8A2B78C9298703A8009C8F89 /* ClienApiControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClienApiControllerMock.swift; sourceTree = "<group>"; };
+		8A2B78CB29870474009C8F89 /* LessonNetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonNetworkManagerMock.swift; sourceTree = "<group>"; };
+		8A2B78CD2987053C009C8F89 /* LessonListViewModelTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListViewModelTestCases.swift; sourceTree = "<group>"; };
+		8A2B78CF29870669009C8F89 /* LessonListViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListViewModelMock.swift; sourceTree = "<group>"; };
 		8A91CEFA298310C600682807 /* PhotographySchoolLessonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotographySchoolLessonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A91CEFD298310C600682807 /* PhotographySchoolLessonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographySchoolLessonAppApp.swift; sourceTree = "<group>"; };
 		8A91CEFF298310C600682807 /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
@@ -208,6 +216,16 @@
 			path = ListDetailsMocks;
 			sourceTree = "<group>";
 		};
+		8A2B78C829870385009C8F89 /* LessonListMock */ = {
+			isa = PBXGroup;
+			children = (
+				8A2B78C9298703A8009C8F89 /* ClienApiControllerMock.swift */,
+				8A2B78CB29870474009C8F89 /* LessonNetworkManagerMock.swift */,
+				8A2B78CF29870669009C8F89 /* LessonListViewModelMock.swift */,
+			);
+			path = LessonListMock;
+			sourceTree = "<group>";
+		};
 		8A91CEF1298310C600682807 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +266,7 @@
 				8A91CF13298310C900682807 /* DownloadManagerTestCases.swift */,
 				8AFA46B22986E419002AB181 /* PlayerViewViewModelTestCases.swift */,
 				8AFA46B62986EAB6002AB181 /* ListDetailsViewModelTestCases.swift */,
+				8A2B78CD2987053C009C8F89 /* LessonListViewModelTestCases.swift */,
 				8AFA46A12985DF80002AB181 /* Mocks */,
 			);
 			path = PhotographySchoolLessonAppTests;
@@ -315,6 +334,7 @@
 				8AFA46A72985E29A002AB181 /* DatabaseMock */,
 				8AFA46A22985DF88002AB181 /* DownloadManagerMocks */,
 				8A2B78C52986FCB0009C8F89 /* ListDetailsMocks */,
+				8A2B78C829870385009C8F89 /* LessonListMock */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -614,14 +634,18 @@
 			files = (
 				8AFA46B32986E419002AB181 /* PlayerViewViewModelTestCases.swift in Sources */,
 				8AFA46B52986E9BC002AB181 /* DataStoreLesson.swift in Sources */,
+				8A2B78CA298703A8009C8F89 /* ClienApiControllerMock.swift in Sources */,
 				8A91CF14298310C900682807 /* DownloadManagerTestCases.swift in Sources */,
 				8AFA46AB2985E35A002AB181 /* DownloadRepositoryMock.swift in Sources */,
 				8AFA46A92985E2EF002AB181 /* AppDatabaseMock.swift in Sources */,
 				8AFA46B72986EAB6002AB181 /* ListDetailsViewModelTestCases.swift in Sources */,
 				8AFA46B12985E72D002AB181 /* FileManagerMock.swift in Sources */,
+				8A2B78D029870669009C8F89 /* LessonListViewModelMock.swift in Sources */,
 				8AFA46AF2985E41E002AB181 /* DataStoreDownload.swift in Sources */,
+				8A2B78CC29870474009C8F89 /* LessonNetworkManagerMock.swift in Sources */,
 				8AFA46AD2985E3A1002AB181 /* LessonRepositoryMock.swift in Sources */,
 				8A2B78C72986FD12009C8F89 /* DownloadManagerMock.swift in Sources */,
+				8A2B78CE2987053C009C8F89 /* LessonListViewModelTestCases.swift in Sources */,
 				8AFA46A42985DFA1002AB181 /* DownloadServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

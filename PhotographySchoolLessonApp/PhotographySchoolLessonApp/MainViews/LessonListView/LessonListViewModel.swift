@@ -18,6 +18,7 @@ class LessonListViewModel: ObservableObject {
     @Published var lessonList: [LessonModel] = []
     private var cancellable: [AnyCancellable] = []
     var appDatabase: AppDatabase = AppDatabase.default
+    var clientApi: ClienApiController = ClienApiController.default
     
     // MARK: - Handling data
     func isInternetConnectionExist() -> Bool {
@@ -67,7 +68,7 @@ class LessonListViewModel: ObservableObject {
     }
     
     private func getLessonsRemote() {
-        ClienApiController.default.lessonNetworkManager.fetchLessons()
+        clientApi.lessonNetworkManager.fetchLessons()
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 if case let .failure(error) = completion, let error = error as? NetworkEngineError {

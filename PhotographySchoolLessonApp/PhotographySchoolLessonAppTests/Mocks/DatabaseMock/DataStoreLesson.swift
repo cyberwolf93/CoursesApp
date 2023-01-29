@@ -29,3 +29,22 @@ class DataStoreLessonThreeItems: DataStoreLesson {
                     videoUrl: "https://embed-ssl.wistia.com/deliveries/cc8402e8c16cc8f36d3f63bd29eb82f99f4b5f88/4z5y6jgwxf.mp4")
     ]
 }
+
+
+class DataStoreLessonOneItemLocal: DataStoreLesson {
+    var lessons: [LessonModel] = [
+        LessonModel(id: 10,
+                    name: "The Key To Success In iPhone Photography", lessonDescription: "The Key To Success In iPhone Photography",
+                    thumbnailUrl: "",
+                    videoUrl: "https://embed-ssl.wistia.com/deliveries/cc8402e8c16cc8f36d3f63bd29eb82f99f4b5f88/accudvh5jy.mp4")
+    ]
+}
+
+class DataStoreLessonOneItemRemote: DataStoreLesson {
+    var lessons: [LessonModel] = [
+        LessonModel(id: 11,
+                    name: "The Key To Success In iPhone Photography", lessonDescription: "The Key To Success In iPhone Photography",
+                    thumbnailUrl: "",
+                    videoUrl: "https://embed-ssl.wistia.com/deliveries/cc8402e8c16cc8f36d3f63bd29eb82f99f4b5f88/accudvh5jy.mp4")
+    ]
+}
