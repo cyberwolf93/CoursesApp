@@ -1,4 +1,4 @@
-![ald text](ReadmeAssets/banner.png)
+![ald text](../../ReadmeAssets/banner.png)
 
 # AppModels Modul
 

@@ -1,4 +1,4 @@
-![ald text](ReadmeAssets/banner.png)
+![ald text](../../ReadmeAssets/banner.png)
 
 # ClientAPI Modul
 
@@ -17,10 +17,10 @@ This modul uses combine to return the api's response data
 
 ## Tech stack
 
-    * [XCode](https://developer.apple.com/documentation/xcode)
-    * [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
-    * [Combine](https://developer.apple.com/documentation/combine)
-    * [XCTest](https://developer.apple.com/documentation/xctest)
+    [XCode](https://developer.apple.com/documentation/xcode)
+    [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+    [Combine](https://developer.apple.com/documentation/combine)
+    [XCTest](https://developer.apple.com/documentation/xctest)
     
 
 ## Tesing

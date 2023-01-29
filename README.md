@@ -5,10 +5,10 @@
 This repository contains an app has some lessons to teach people  photography.
 
 ## Screenshots
-<img src="screenshots/list_screen.PNG" width="200">
-<img src="screenshots/details.PNG" width="200">
-<img src="screenshots/details_download.PNG" width="200">
-<img src="screenshots/player.PNG" width="200">
+<img src="ReadmeAssets/screenshots/list_screen.PNG" width="200">
+<img src="ReadmeAssets/screenshots/details.PNG" width="200">
+<img src="ReadmeAssets/screenshots/details_download.PNG" width="200">
+<img src="ReadmeAssets/screenshots/player.PNG" width="200">
 
 ## Overview
 
@@ -55,15 +55,15 @@ This controller also runs once the appication starts running and check if there 
 
 ### AppDatabase Modul
 
-[Read more][https://github.com/cyberwolf93/PhotographySchoolLessonApp/tree/main/PhotographySchoolLessonApp/AppDataBase]
+[Read more](https://github.com/cyberwolf93/PhotographySchoolLessonApp/tree/main/PhotographySchoolLessonApp/AppDataBase)
 
 ### ClientAPI Modul
 
-[Read more][https://github.com/cyberwolf93/PhotographySchoolLessonApp/tree/main/PhotographySchoolLessonApp/ClientAPI]
+[Read more](https://github.com/cyberwolf93/PhotographySchoolLessonApp/tree/main/PhotographySchoolLessonApp/ClientAPI)
 
 ### AppModels Modul
 
-[Read more][https://github.com/cyberwolf93/PhotographySchoolLessonApp/tree/main/PhotographySchoolLessonApp/AppModels]
+[Read more](https://github.com/cyberwolf93/PhotographySchoolLessonApp/tree/main/PhotographySchoolLessonApp/AppModels)
 
 ## Installation
 
@@ -87,14 +87,14 @@ make sure to choose a developer team then run it on a real device with and iOS v
 
 ## Tech stack
 
-    * [XCode](https://developer.apple.com/documentation/xcode)
-    * [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
-    * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
-    * [UIKit](https://developer.apple.com/documentation/uikit)
-    * [Combine](https://developer.apple.com/documentation/combine)
-    * [CocoaPods](https://cocoapods.org/)
-    * [CoreData](https://developer.apple.com/documentation/coredata)
-    * [XCTest](https://developer.apple.com/documentation/xctest)
+     [XCode](https://developer.apple.com/documentation/xcode)
+     [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+     [SwiftUI](https://developer.apple.com/documentation/swiftui/)
+     [UIKit](https://developer.apple.com/documentation/uikit)
+     [Combine](https://developer.apple.com/documentation/combine)
+     [CocoaPods](https://cocoapods.org/)
+     [CoreData](https://developer.apple.com/documentation/coredata)
+     [XCTest](https://developer.apple.com/documentation/xctest)
     
 
 ## Future Plans

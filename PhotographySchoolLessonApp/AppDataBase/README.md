@@ -1,4 +1,4 @@
-![ald text](ReadmeAssets/banner.png)
+![ald text](../../ReadmeAssets/banner.png)
 
 # AppDatabase Modul
 
@@ -22,10 +22,10 @@ To save the lesson in the download queue and waiting to be downloaded
 
 ## Tech stack
 
-    * [XCode](https://developer.apple.com/documentation/xcode)
-    * [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
-    * [CoreData](https://developer.apple.com/documentation/coredata)
-    * [XCTest](https://developer.apple.com/documentation/xctest)
+    [XCode](https://developer.apple.com/documentation/xcode)
+    [Swift](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+    [CoreData](https://developer.apple.com/documentation/coredata)
+    [XCTest](https://developer.apple.com/documentation/xctest)
     
 
 ## Tesing
