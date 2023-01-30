@@ -118,7 +118,7 @@ The idea is to build a modul only for navigation and all app's screen go to that
 
 ## Tesing
 
-This app has unit tests using XCTest with 54.1% coverage wich cover all view models and download manager.
+This app has unit test cases and UI test cases using XCTest with 96.3% coverage which cover all view model, download manager and views
 Download manager has 98.2% coverage
  
 

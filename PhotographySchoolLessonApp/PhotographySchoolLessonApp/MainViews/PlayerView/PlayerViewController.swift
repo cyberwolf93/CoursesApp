@@ -15,6 +15,7 @@ class PlayerViewController: AVPlayerViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.accessibilityIdentifier = PlayerAccessibilityIDType.parentView.rawValue
         player = viewModel?.getAvPlayer()
         player?.play()
     }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import AppDataBase
 
 @main
 struct PhotographySchoolLessonAppApp: App {
@@ -30,6 +31,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             try audioSession.setActive(true)
         } catch {
             print("Failed to activate audio session in background")
+        }
+        
+        // Check if the app started from UI test case
+        if ProcessInfo.processInfo.arguments.contains("-UITestLaunch") {
+            let allDownloadedItems = AppDatabase.default.downloadRepository.getAll()
+            allDownloadedItems.forEach({AppDatabase.default.downloadRepository.deleteItem(with: $0.id) })
         }
         
         // This line to trigger download manager and start downloading the pending lessons

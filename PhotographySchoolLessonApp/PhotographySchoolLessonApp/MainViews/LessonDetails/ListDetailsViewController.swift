@@ -68,6 +68,7 @@ class ListDetailsViewController: UIViewController {
         button.setImage(UIImage(systemName: "icloud.and.arrow.down"), for: .normal)
         button.setTitle("lesson_details_download".localized(), for: .normal)
         button.configuration = confguration
+        button.accessibilityIdentifier = DetailsAccessibilityIDType.downlaodButton.rawValue
         button.addTarget(self, action: #selector(startDownloadButtonClicked), for: .touchUpInside)
         let downloadButton = UIBarButtonItem(customView: button)
         downloadButton.customView?.isUserInteractionEnabled = true
@@ -82,6 +83,7 @@ class ListDetailsViewController: UIViewController {
         button.setImage(UIImage(systemName: "trash.slash"), for: .normal)
         button.setTitle("lesson_details_remove".localized(), for: .normal)
         button.configuration = confguration
+        button.accessibilityIdentifier = DetailsAccessibilityIDType.downlaodButton.rawValue
         button.addTarget(self, action: #selector(removeDownloadButtonClicked), for: .touchUpInside)
         let downloadButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItems = [downloadButton]
@@ -154,6 +156,8 @@ class ListDetailsViewController: UIViewController {
         playImageView = UIImageView(image: UIImage(systemName: "play.fill"))
         playImageView!.tintColor = .white
         thumbnailView!.addSubview(playImageView!)
+        playImageView?.accessibilityTraits = .button
+        playImageView?.accessibilityIdentifier = DetailsAccessibilityIDType.playButton.rawValue
         playImageView!.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             playImageView!.centerXAnchor.constraint(equalTo: thumbnailView!.centerXAnchor),
@@ -184,6 +188,7 @@ class ListDetailsViewController: UIViewController {
         labelTitle!.numberOfLines = 0
         
         parenView.addSubview(labelTitle!)
+        labelTitle?.accessibilityIdentifier = DetailsAccessibilityIDType.title.rawValue
         labelTitle!.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             labelTitle!.leftAnchor.constraint(equalTo: parenView.leftAnchor, constant: contentPadding),
@@ -206,6 +211,7 @@ class ListDetailsViewController: UIViewController {
         labelDescription!.numberOfLines = 0
         
         parenView.addSubview(labelDescription!)
+        labelDescription?.accessibilityIdentifier = DetailsAccessibilityIDType.description.rawValue
         labelDescription!.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             labelDescription!.leftAnchor.constraint(equalTo: parenView.leftAnchor, constant: contentPadding),
@@ -223,6 +229,7 @@ class ListDetailsViewController: UIViewController {
         viewSeperator = UIView()
         viewSeperator!.backgroundColor = .gray.withAlphaComponent(0.4)
         parenView.addSubview(viewSeperator!)
+        viewSeperator?.accessibilityIdentifier = DetailsAccessibilityIDType.downloadViewSeparator.rawValue
         viewSeperator!.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             viewSeperator!.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: contentPadding),
@@ -239,6 +246,7 @@ class ListDetailsViewController: UIViewController {
         labelDownloading?.textColor = .systemBlue
         labelDownloading?.numberOfLines = 1
         parenView.addSubview(labelDownloading!)
+        labelDownloading?.accessibilityIdentifier = DetailsAccessibilityIDType.downloadLabel.rawValue
         labelDownloading?.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             labelDownloading!.topAnchor.constraint(equalTo: viewSeperator!.bottomAnchor, constant: contentPadding),
@@ -254,6 +262,7 @@ class ListDetailsViewController: UIViewController {
         progressView?.isUserInteractionEnabled = false
         progressView?.translatesAutoresizingMaskIntoConstraints = false
         parenView.addSubview(progressView!)
+        progressView?.accessibilityIdentifier = DetailsAccessibilityIDType.downloadProgressView.rawValue
         NSLayoutConstraint.activate([
             progressView!.topAnchor.constraint(equalTo: labelDownloading!.bottomAnchor, constant: 2),
             progressView!.leftAnchor.constraint(equalTo: parenView.leftAnchor, constant: contentPadding),
@@ -278,6 +287,7 @@ class ListDetailsViewController: UIViewController {
         nextLessonButton?.configuration = configuration
         parenView.addSubview(nextLessonButton!)
         nextLessonButton?.addTarget(self, action: #selector(buttonNextLessonClicked), for: .touchUpInside)
+        nextLessonButton?.accessibilityIdentifier = DetailsAccessibilityIDType.nextLessonButton.rawValue
         nextLessonButton?.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             nextLessonButton!.rightAnchor.constraint(equalTo: parenView.rightAnchor),

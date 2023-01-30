@@ -23,6 +23,7 @@ struct LessonListRow: View {
                 Text(viewModel.lesson.name)
                     .font(.body)
                     .lineLimit(3)
+                    .accessibilityIdentifier(ListAccessibilityIDType.cellTitle.rawValue)
                 Spacer()
                 Button {
                     
