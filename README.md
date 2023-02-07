@@ -1,6 +1,6 @@
 ![ald text](ReadmeAssets/banner.png)
 
-# Photography School Lessons
+# Courses App
 
 This repository contains an app has some lessons to teach people  photography.
 
